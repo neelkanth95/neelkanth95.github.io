@@ -193,3 +193,100 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Mermaid diagram container */
+.mermaid {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    margin: 20px 0;
+}
+
+/* Priority badges */
+.priority-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+.p0 { background: #fc8181; }
+.p1 { background: #f6ad55; }
+.p2 { background: #68d391; }
+
+/* Roadmap phases */
+.roadmap-phase {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    margin: 20px 0;
+}
+
+.roadmap-phase h4 {
+    color: #667eea;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* Competitor analysis */
+.competitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.competitor-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+}
+
+.competitor-card h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.score-bar {
+    background: #edf2f7;
+    height: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    background: #667eea;
+    transition: width 0.3s;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+table thead {
+    background: #667eea;
+    color: white;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
