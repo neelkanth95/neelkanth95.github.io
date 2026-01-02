@@ -186,6 +186,381 @@
             </div>
         </div>
     </section>
+    <!-- PRD Section -->
+<section class="content-section">
+    <div class="container">
+        <h2 class="section-title">Product Requirements Document</h2>
+        
+        <!-- Executive Summary -->
+        <div class="prd-section">
+            <h3 class="prd-heading">Executive Summary</h3>
+            <div style="background: white; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    <strong>Objective:</strong> Build a real-time churn prevention system that reduces customer attrition by 15% while maintaining an 80% precision rate for retention offers.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    <strong>Target Users:</strong> Relationship managers at Tier-1 banks managing 500+ high-value credit card accounts ($50K+ annual spend).
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    <strong>Success Criteria:</strong> 15% reduction in churn within 6 months, $2M+ incremental revenue per quarter, 72-hour response time for high-risk alerts.
+                </p>
+            </div>
+        </div>
+        <!-- User Flows & Wireframes -->
+<section class="content-section">
+    <div class="container">
+        <h2 class="section-title">User Flows & Wireframes</h2>
+
+        <!-- User Flow 1: Relationship Manager Workflow -->
+        <div class="prd-section">
+            <h3 class="prd-heading">Flow 1: Relationship Manager - Daily Churn Monitoring</h3>
+            <div style="background: white; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <pre style="background: #f7fafc; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 0.9rem;">
+┌─────────────────┐
+│ Login to        │
+│ Dashboard       │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ View High-Risk  │
+│ Customers (Top  │◄─── Filter by: Segment, Risk Score, CLV
+│ 20)             │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Select Customer │
+│ → View Profile  │
+└────────┬────────┘
+         │
+         ├─────────────────┐
+         │                 │
+         ▼                 ▼
+┌────────────────┐  ┌──────────────────┐
+│ Review Churn   │  │ Review Suggested │
+│ Indicators:    │  │ Retention Offer: │
+│ • ↓ Spend 30%  │  │ • 2% APR cut     │
+│ • Competitor   │  │ • $200 cashback  │
+│   research     │  │ • ROI: $1,500    │
+└────────┬───────┘  └────────┬─────────┘
+         │                   │
+         └─────────┬─────────┘
+                   ▼
+          ┌────────────────┐
+          │ Approve Offer  │
+          │ (One-Click)    │
+          └────────┬───────┘
+                   │
+                   ▼
+          ┌────────────────┐
+          │ Offer Deployed │
+          │ via Email/SMS  │
+          └────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- User Flow 2: Data Analyst Workflow -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">Flow 2: Data Analyst - Model Performance Review</h3>
+            <div style="background: white; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <pre style="background: #f7fafc; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 0.9rem;">
+┌─────────────────┐
+│ Navigate to     │
+│ Analytics Tab   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ View Model      │
+│ Performance:    │
+│ • AUC-ROC: 0.83 │
+│ • Precision: 80%│
+│ • Recall: 76%   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Identify Low-   │
+│ Performance     │
+│ Segments        │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Drill into      │
+│ Feature         │
+│ Importance      │
+└────────┬────────┘
+         │
+         ├──────────────────┐
+         │                  │
+         ▼                  ▼
+┌────────────────┐  ┌──────────────────┐
+│ Export Data    │  │ Retrain Model    │
+│ for Analysis   │  │ with New Features│
+└────────────────┘  └────────┬─────────┘
+                             │
+                             ▼
+                    ┌────────────────┐
+                    │ Deploy New     │
+                    │ Model Version  │
+                    └────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Wireframes -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">Key Wireframes</h3>
+            
+            <!-- Dashboard Wireframe -->
+            <h4 style="color: #667eea; margin: 30px 0 15px 0;">1. Main Dashboard (Relationship Manager View)</h4>
+            <div style="background: white; padding: 30px; border: 2px solid #e2e8f0; border-radius: 10px;">
+                <pre style="font-family: monospace; line-height: 1.4; font-size: 0.85rem;">
+╔══════════════════════════════════════════════════════════════════════╗
+║  FinEdge                    [Search Customer]    👤 Sarah M.  [⚙️]   ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                       ║
+║  📊 Overview                🚨 High Risk (14)    ⚠️ Medium (32)      ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ Churn Rate Trend (Last 90 Days)                              │   ║
+║  │                                   ╱╲                          │   ║
+║  │                              ╱───╯  ╲                         │   ║
+║  │                         ╱───╯        ╲                        │   ║
+║  │  24% ─────────────────────────────────╲─────── 20.4%         │   ║
+║  │       Jan          Feb          Mar          Apr              │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+║  🔴 High-Risk Customers (Next 30 Days)          [Filter ▼] [Export] ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ Name          Risk Score  CLV      Last Activity  Action      │   ║
+║  ├─────────────────────────────────────────────────────────────┤   ║
+║  │ John Smith    🔴 92%      $85K     2 days ago     [Review]    │   ║
+║  │ Maria Garcia  🔴 89%      $120K    5 days ago     [Review]    │   ║
+║  │ David Chen    🔴 87%      $95K     1 day ago      [Review]    │   ║
+║  │ ...                                                            │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+╚══════════════════════════════════════════════════════════════════════╝
+                </pre>
+            </div>
+
+            <!-- Customer Detail Wireframe -->
+            <h4 style="color: #667eea; margin: 30px 0 15px 0;">2. Customer Detail Page</h4>
+            <div style="background: white; padding: 30px; border: 2px solid #e2e8f0; border-radius: 10px;">
+                <pre style="font-family: monospace; line-height: 1.4; font-size: 0.85rem;">
+╔══════════════════════════════════════════════════════════════════════╗
+║  ← Back to Dashboard                            👤 John Smith        ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                       ║
+║  ┌──────────────────────────┐  ┌─────────────────────────────────┐ ║
+║  │ 🔴 Churn Risk: 92%       │  │ Customer Since: Jan 2019        │ ║
+║  │ Confidence: High         │  │ CLV: $85,000                     │ ║
+║  │ Predicted Churn: 14 days │  │ Avg Monthly Spend: $4,200       │ ║
+║  └──────────────────────────┘  └─────────────────────────────────┘ ║
+║                                                                       ║
+║  📉 Risk Indicators                                                  ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ ⚠️  Transaction volume ↓ 35% (last 30 days)                 │   ║
+║  │ ⚠️  Searched "best credit cards 2025" on Google             │   ║
+║  │ ⚠️  Called customer service 3x in 2 weeks                   │   ║
+║  │ ⚠️  Credit utilization dropped to 12% (from 45%)            │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+║  💡 Recommended Action                                               ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ Offer Type: Interest Rate Reduction                          │   ║
+║  │ Details: Reduce APR from 18.99% → 16.99% for 12 months      │   ║
+║  │ Expected ROI: $1,500 (retention value - offer cost)          │   ║
+║  │ Success Probability: 68%                                      │   ║
+║  │                                                               │   ║
+║  │ Alternative: $200 cashback + bonus rewards (3x for 90 days) │   ║
+║  │                                                               │   ║
+║  │               [Approve Offer]  [Customize]  [Dismiss]        │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+╚══════════════════════════════════════════════════════════════════════╝
+                </pre>
+            </div>
+
+            <!-- Analytics Dashboard Wireframe -->
+            <h4 style="color: #667eea; margin: 30px 0 15px 0;">3. Analytics Dashboard (Data Analyst View)</h4>
+            <div style="background: white; padding: 30px; border: 2px solid #e2e8f0; border-radius: 10px;">
+                <pre style="font-family: monospace; line-height: 1.4; font-size: 0.85rem;">
+╔══════════════════════════════════════════════════════════════════════╗
+║  FinEdge Analytics                       [Date Range: Last 90 Days ▼]║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                       ║
+║  📊 Model Performance                                                ║
+║  ┌────────────────┐ ┌────────────────┐ ┌────────────────┐          ║
+║  │ AUC-ROC        │ │ Precision      │ │ Recall         │          ║
+║  │   0.83         │ │   80%          │ │   76%          │          ║
+║  │ ▲ +2% vs LM    │ │ ▲ +5% vs LM    │ │ ▼ -1% vs LM    │          ║
+║  └────────────────┘ └────────────────┘ └────────────────┘          ║
+║                                                                       ║
+║  🎯 Feature Importance (Top 10)                                      ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ Transaction Velocity       ████████████████████ 0.18         │   ║
+║  │ Credit Utilization Change  ████████████████ 0.15             │   ║
+║  │ Customer Service Contacts  ████████████ 0.12                 │   ║
+║  │ Competitor Research        ██████████ 0.10                   │   ║
+║  │ Reward Redemption Rate     ████████ 0.08                     │   ║
+║  │ ...                                                            │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+║  🧪 A/B Test Results                               [View All Tests]  ║
+║  ┌─────────────────────────────────────────────────────────────┐   ║
+║  │ Test: APR Reduction vs. Cashback Offer                        │   ║
+║  │ Duration: 30 days | Sample: 1,200 customers                  │   ║
+║  │                                                               │   ║
+║  │ Control (APR): 22% retention | Treatment (Cash): 28%         │   ║
+║  │ Winner: Cashback ✓ (p-value: 0.003)                          │   ║
+║  │                                                               │   ║
+║  │                    [Deploy Winner]  [View Details]            │   ║
+║  └─────────────────────────────────────────────────────────────┘   ║
+║                                                                       ║
+╚══════════════════════════════════════════════════════════════════════╝
+                </pre>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- User Personas -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">User Personas</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">👔 Sarah - Relationship Manager</h4>
+                    <p><strong>Goals:</strong> Retain high-value customers, hit quarterly revenue targets</p>
+                    <p><strong>Pain Points:</strong> Reactive churn alerts, manual offer approval process taking 5+ days</p>
+                    <p><strong>Needs:</strong> Predictive dashboard, one-click retention offer deployment</p>
+                </div>
+                <div class="feature-card">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">📊 David - Data Analyst</h4>
+                    <p><strong>Goals:</strong> Improve churn model accuracy, validate retention ROI</p>
+                    <p><strong>Pain Points:</strong> Siloed data across systems, no A/B testing framework</p>
+                    <p><strong>Needs:</strong> Feature engineering pipeline, experiment tracking dashboard</p>
+                </div>
+                <div class="feature-card">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">💼 Michelle - VP of Retention</h4>
+                    <p><strong>Goals:</strong> Reduce churn below 20%, optimize retention budget allocation</p>
+                    <p><strong>Pain Points:</strong> Can't measure which offers drive retention vs. revenue lift</p>
+                    <p><strong>Needs:</strong> Executive dashboard with cost-per-retention metrics</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Requirements -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">Core Requirements</h3>
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
+                <thead style="background: #667eea; color: white;">
+                    <tr>
+                        <th style="padding: 15px; text-align: left; width: 15%;">Priority</th>
+                        <th style="padding: 15px; text-align: left; width: 35%;">Requirement</th>
+                        <th style="padding: 15px; text-align: left; width: 30%;">Acceptance Criteria</th>
+                        <th style="padding: 15px; text-align: left; width: 20%;">Timeline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 15px;"><span style="background: #fc8181; color: white; padding: 5px 12px; border-radius: 15px; font-weight: 600;">P0</span></td>
+                        <td style="padding: 15px;">Real-time churn risk scoring (72-hour refresh)</td>
+                        <td style="padding: 15px;">Risk score updates every 72 hours with <200ms latency for dashboard queries</td>
+                        <td style="padding: 15px;">MVP (Month 1-2)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 15px;"><span style="background: #fc8181; color: white; padding: 5px 12px; border-radius: 15px; font-weight: 600;">P0</span></td>
+                        <td style="padding: 15px;">Automated retention offer triggers based on CLV segmentation</td>
+                        <td style="padding: 15px;">Offers deployed within 24 hours of high-risk alert with 80% precision</td>
+                        <td style="padding: 15px;">MVP (Month 1-2)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 15px;"><span style="background: #f6ad55; color: white; padding: 5px 12px; border-radius: 15px; font-weight: 600;">P1</span></td>
+                        <td style="padding: 15px;">A/B testing framework for retention offers</td>
+                        <td style="padding: 15px;">Support 5+ concurrent experiments with statistical significance detection (p<0.05)</td>
+                        <td style="padding: 15px;">V2 (Month 3-4)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 15px;"><span style="background: #f6ad55; color: white; padding: 5px 12px; border-radius: 15px; font-weight: 600;">P1</span></td>
+                        <td style="padding: 15px;">Integration with Salesforce CRM and Segment CDP</td>
+                        <td style="padding: 15px;">Bi-directional sync of customer data and retention actions within 15 minutes</td>
+                        <td style="padding: 15px;">V2 (Month 3-4)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px;"><span style="background: #68d391; color: white; padding: 5px 12px; border-radius: 15px; font-weight: 600;">P2</span></td>
+                        <td style="padding: 15px;">Explainable AI dashboard showing feature importance for each churn prediction</td>
+                        <td style="padding: 15px;">SHAP values displayed for top 10 features with natural language explanations</td>
+                        <td style="padding: 15px;">V3 (Month 5-6)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Non-Functional Requirements -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">Non-Functional Requirements</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4 style="color: #2d3748; margin-bottom: 10px;">⚡ Performance</h4>
+                    <ul style="line-height: 1.8; margin-left: 20px;">
+                        <li>Dashboard loads in <3 seconds (P95)</li>
+                        <li>Risk score inference <200ms</li>
+                        <li>Support 10K+ concurrent users</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4 style="color: #2d3748; margin-bottom: 10px;">🔒 Security</h4>
+                    <ul style="line-height: 1.8; margin-left: 20px;">
+                        <li>SOC 2 Type II compliance</li>
+                        <li>PII data encrypted at rest (AES-256)</li>
+                        <li>Role-based access control (RBAC)</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4 style="color: #2d3748; margin-bottom: 10px;">📈 Scalability</h4>
+                    <ul style="line-height: 1.8; margin-left: 20px;">
+                        <li>Handle 10M+ customer records</li>
+                        <li>Horizontal scaling for API layer</li>
+                        <li>99.9% uptime SLA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Out of Scope (V1) -->
+        <div class="prd-section" style="margin-top: 40px;">
+            <h3 class="prd-heading">Out of Scope (V1)</h3>
+            <div style="background: #fff5f5; border-left: 4px solid #fc8181; padding: 25px; border-radius: 8px;">
+                <ul style="line-height: 1.8; margin-left: 20px;">
+                    <li>Mobile app for relationship managers (defer to V2)</li>
+                    <li>Integration with external credit bureaus (use existing data feeds)</li>
+                    <li>Multi-channel attribution (email/SMS/phone) for retention offers</li>
+                    <li>Predictive lifetime value (LTV) modeling beyond basic segmentation</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.prd-section {
+    margin-bottom: 40px;
+}
+
+.prd-heading {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+</style>
 
     <!-- Key Features -->
     <section class="content-section">
