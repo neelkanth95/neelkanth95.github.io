@@ -1,1 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinEdge - Neel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Project-specific styles */
+        .project-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
 
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-hero .tagline {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .problem-box {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .solution-box {
+            background: #f0fff4;
+            border-left: 4px solid #68d391;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .insight-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .insight-box h4 {
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <h1>FinEdge</h1>
+            <p class="tagline">Smart Credit Scoring & Churn Prevention Engine</p>
+            <p class="tagline">"Using behavioral AI to turn high-risk churn signals into 15% incremental revenue"</p>
+        </div>
+    </div>
+
+    <!-- Problem Statement -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Problem</h2>
+            <div class="problem-box">
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Banks lose 15-20% of credit card customers annually, with the average cost of acquiring a new customer being <strong>5x higher</strong> than retaining an existing one. Traditional churn prediction models rely on static demographic data and fail to capture real-time behavioral signals—meaning banks only discover a customer is leaving <strong>after</strong> they've closed their account. This reactive approach costs the financial services industry <strong>$136 billion annually</strong> in preventable customer attrition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Solution</h2>
+            <div class="solution-box">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                    FinEdge is a real-time churn prevention engine that monitors customer behavior across transaction patterns, customer service interactions, and competitive research signals. When high-risk churn indicators are detected, the system automatically triggers personalized retention offers—loan rate adjustments, cashback incentives, or premium upgrades—tailored to each customer's financial profile.
+                </p>
+                <ul style="font-size: 1.05rem; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Behavioral Segmentation:</strong> Clusters customers into risk tiers using transaction velocity, credit utilization, and engagement metrics</li>
+                    <li><strong>Predictive Churn Scoring:</strong> Real-time risk scores updated every 72 hours based on evolving customer behavior</li>
+                    <li><strong>Automated Retention Triggers:</strong> Dynamic offer engine that personalizes interventions based on customer lifetime value (CLV)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📊 Churn Risk Dashboard</h3>
+                    <p>Real-time monitoring interface showing customer risk scores, behavioral trends, and predicted churn probability over the next 90 days. Integrates with existing CRM systems for seamless adoption.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Personalized Offer Engine</h3>
+                    <p>Machine learning-driven recommendation system that suggests optimal retention strategies—from interest rate reductions to loyalty rewards—based on customer segment and profitability analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ A/B Testing Framework</h3>
+                    <p>Built-in experimentation platform to test retention offers at scale, measuring impact on churn reduction, customer satisfaction (NPS), and incremental revenue per intervention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Metrics -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Impact & Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">15%</div>
+                    <div class="metric-label">Churn Reduction<br>(24% → 20.4%)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$2.3M</div>
+                    <div class="metric-label">Incremental Revenue<br>(per 100K customers)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">72hrs</div>
+                    <div class="metric-label">Response Time<br>for High-Risk Signals</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">83%</div>
+                    <div class="metric-label">Prediction Accuracy<br>(AUC-ROC Score)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Approach -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Technical Approach</h2>
+            <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+                The system architecture combines batch processing for historical analysis with real-time streaming for immediate churn detection:
+            </p>
+            <ul style="font-size: 1.05rem; line-height: 1.8; margin-left: 20px; margin-bottom: 30px;">
+                <li><strong>Data Pipeline:</strong> Ingests transaction logs, customer service tickets, and credit bureau data via Apache Kafka</li>
+                <li><strong>Feature Engineering:</strong> Extracts 120+ behavioral features including transaction velocity, spending category shifts, and customer service escalation patterns</li>
+                <li><strong>Model Architecture:</strong> Ensemble of XGBoost (for tabular features) + LSTM (for time-series behavior patterns) achieving 83% AUC-ROC</li>
+                <li><strong>Deployment:</strong> Served via FastAPI with Redis caching for sub-200ms inference latency at 10K+ requests/minute</li>
+            </ul>
+            
+            <h3 style="margin-top: 40px; margin-bottom: 20px; color: #2d3748;">Tech Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">XGBoost</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Apache Airflow</span>
+                <span class="tech-badge">Kafka</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Streamlit</span>
+                <span class="tech-badge">Docker</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Lessons Learned</h2>
+            
+            <div class="insight-box">
+                <h4>Why XGBoost Over Neural Networks for Churn Prediction</h4>
+                <p>Initially tested deep learning approaches (TabNet, FT-Transformer) but found XGBoost outperformed them by 4% in AUC-ROC while being 10x faster to train. The key insight: churn prediction relies heavily on feature interactions (e.g., "declining transaction count + increasing competitor research"), which gradient boosting handles exceptionally well. Neural networks struggled with the small sample size of true churn events (~2-3% of dataset).</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>The Importance of Temporal Features</h4>
+                <p>Adding LSTM for sequential patterns (e.g., "customer stopped using rewards program 30 days before account closure") improved recall by 12%. This taught me that <strong>change patterns</strong> are more predictive than static snapshots—a customer with declining engagement is higher risk than one who was never engaged.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>Balancing Precision vs. Recall in Production</h4>
+                <p>The business constraint was clear: false positives (offering retention deals to non-churners) cost money, but false negatives (missing a churner) cost even more. We optimized for recall at 80% precision, accepting that 20% of retention offers would go to "safe" customers—but this was cheaper than losing high-value accounts.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Neel [Last Name]. <a href="index.html" style="color: white; opacity: 0.8;">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html>
