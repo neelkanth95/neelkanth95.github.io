@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoshTalks AI Humanness Platform - Neel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'neutral',
+            themeVariables: {
+                primaryColor: '#10b981',
+                primaryTextColor: '#2d3748',
+                primaryBorderColor: '#10b981',
+                lineColor: '#a0aec0',
+                secondaryColor: '#f7fafc',
+                tertiaryColor: '#edf2f7'
+            }
+        });
+    </script>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-hero .tagline {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+        }
+
+        .interview-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .prd-table {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .prd-table tr {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .prd-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .prd-table td {
+            padding: 20px;
+        }
+
+        .prd-table td:first-child {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+            width: 30%;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .prd-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+
+        .prd-section h3 {
+            color: #10b981;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .prd-section h4 {
+            color: #2d3748;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .metric-box {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .metric-box h4 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .persona-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            margin: 15px 0;
+        }
+
+        .persona-card h4 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 15px;
+            background: #f7fafc;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #10b981;
+        }
+
+        .feature-list li strong {
+            color: #10b981;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .timeline-table th {
+            background: #10b981;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .timeline-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .timeline-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .insight-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .insight-box h4 {
+            color: #065f46;
+            margin-bottom: 10px;
+        }
+
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+
+        .callout {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .callout.success {
+            background: #f0fff4;
+            border-left-color: #68d391;
+        }
+
+        .callout.info {
+            background: #ebf8ff;
+            border-left-color: #4299e1;
+        }
+
+        ul.checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.checklist li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .wireframe-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
+
+        .wireframe-container h4 {
+            color: #10b981;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .wireframe-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .challenge-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .challenge-box h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .tool-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tool-badge {
+            background: white;
+            border: 2px solid #10b981;
+            color: #10b981;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <h1>JoshTalks AI - Humanness Platform</h1>
+            <p class="tagline">Crowdsourced Image Collection Platform for Culturally Inclusive AI</p>
+            <p class="tagline" style="font-size: 1.1rem; margin-top: 10px;">Building India's Visual Dataset for Computer Vision Models</p>
+            <div class="interview-badge">
+                ✨ Real Interview Assignment - Product Management Internship
+            </div>
+        </div>
+    </div>
+
+    <!-- PRD Header -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Product Overview</h2>
+            <table class="prd-table">
+                <tr>
+                    <td>Title/Initiative</td>
+                    <td><strong>Humanness Platform: Crowdsourced Visual Data Collection for AI Inclusivity</strong></td>
+                </tr>
+                <tr>
+                    <td>Date & Version</td>
+                    <td>November 2024 | Version 1.0 (Interview Submission)</td>
+                </tr>
+                <tr>
+                    <td>Product - Point of Contact (POC)</td>
+                    <td>Neel Maddheshiya - PM Intern Candidate</td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td>JoshTalks AI</td>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>Mobile Web App (PWA) + Admin Dashboard</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>📋 Design Proposal (Interview Task)</td>
+                </tr>
+            </table>
+
+            <!-- Context -->
+            <div class="prd-section" style="margin-top: 30px;">
+                <h3>🎯 Assignment Context</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    This was a <strong>take-home assignment</strong> for JoshTalks AI's Product Management Internship. The task involved designing a platform to collect authentic images and descriptions from rural India to train culturally inclusive AI vision models. The assignment had two parts:
+                </p>
+                <ul style="margin: 15px 0 0 20px; line-height: 1.8;">
+                    <li><strong>Part 1:</strong> Design a mobile-first crowdsourcing platform for contributors in low-connectivity areas</li>
+                    <li><strong>Part 2:</strong> Analyze transcription quality data and design an automated detection system for low-effort work</li>
+                </ul>
+            </div>
+
+            <!-- PM Tools Used -->
+            <div class="prd-section" style="margin-top: 30px;">
+                <h3>🛠️ PM Tools & Workflow</h3>
+                <div class="tool-badge-container">
+                    <div class="tool-badge">📊 Figma - Mobile UI Design</div>
+                    <div class="tool-badge">📋 Google Docs - PRD Writing</div>
+                    <div class="tool-badge">📈 Excel - Data Analysis</div>
+                    <div class="tool-badge">🔗 Mermaid - Flow Diagrams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why? (Objective) -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Why? (Objective)</h2>
+            
+            <div class="prd-section">
+                <h3>1. For Business (JoshTalks AI)</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    Current AI vision models are trained predominantly on Western datasets and struggle to recognize Indian contexts—Durga Puja pandals, hand pumps, bullock carts, village schools, and other culturally specific scenes. This creates a <strong>bias problem</strong> where AI systems fail to serve 1.4 billion Indians effectively.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    <strong>Business Impact:</strong>
+                </p>
+                <ul style="font-size: 1.05rem; line-height: 1.8; margin-left: 20px;">
+                    <li>Create India's largest crowdsourced visual dataset (target: 1M+ verified images)</li>
+                    <li>Train culturally-aware computer vision models for Indian markets</li>
+                    <li>Enable AI applications in agriculture, education, healthcare with local context</li>
+                    <li>Position JoshTalks AI as leader in inclusive AI for emerging markets</li>
+                </ul>
+            </div>
+
+            <div class="prd-section">
+                <h3>2. For Users</h3>
+                
+                <div class="persona-card">
+                    <h4>👥 Primary: Rural Contributors</h4>
+                    <p><strong>Who they are:</strong> Local citizens, NGO field workers, volunteers in villages across India</p>
+                    <p><strong>Current Problem:</strong> "AI doesn't understand our environment—it can't identify a hand pump or bullock cart, but it knows the Eiffel Tower perfectly."</p>
+                    <p><strong>What They Need:</strong> Simple, offline-capable tool to contribute authentic local images without needing technical skills or constant internet access</p>
+                    <p><strong>Value Delivered:</strong> Empowerment to shape AI that understands their culture + potential earnings for contributions</p>
+                </div>
+
+                <div class="persona-card">
+                    <h4>🎯 Secondary: Admin / Data Reviewers</h4>
+                    <p><strong>Who they are:</strong> JoshTalks AI internal team members managing data quality</p>
+                    <p><strong>Current Problem:</strong> No system to track geographic coverage, verify image authenticity, or prevent low-quality submissions at scale</p>
+                    <p><strong>What They Need:</strong> Dashboard to review submissions, track district-wise progress, flag duplicates/spam</p>
+                    <p><strong>Value Delivered:</strong> Efficient workflow to maintain dataset quality with minimal manual effort</p>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>3. The Bigger Mission: AI Inclusivity</h3>
+                <div class="callout success">
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <strong>"If AI can recognize Times Square but not a village hand pump, it's not serving everyone equally."</strong>
+                    </p>
+                    <p style="margin-top: 10px;">This platform aims to democratize AI by ensuring it understands the environments where 70% of Indians live—rural communities often ignored by mainstream tech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Challenges -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Core Technical Challenges</h2>
+
+            <div class="prd-section">
+                <h3>Design Constraints</h3>
+                
+                <div class="challenge-box">
+                    <h4>⚠️ Challenge 1: Patchy Internet Connectivity</h4>
+                    <p><strong>Problem:</strong> Contributors work in areas with unreliable 2G/3G networks or intermittent connectivity.</p>
+                    <p><strong>Solution:</strong> Offline-first architecture with local caching and background sync when network returns.</p>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>⚠️ Challenge 2: Low-End Smartphones</h4>
+                    <p><strong>Problem:</strong> Contributors use basic Android devices with 1-2GB RAM and limited storage.</p>
+                    <p><strong>Solution:</strong> Progressive Web App (PWA) instead of heavy native app + aggressive image compression.</p>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>⚠️ Challenge 3: Multilingual Support</h4>
+                    <p><strong>Problem:</strong> Contributors speak 10+ major Indian languages, many with limited English proficiency.</p>
+                    <p><strong>Solution:</strong> Voice-to-text input + UI translated into Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia.</p>
+                </div>
+
+                <div class="challenge-box">
+                    <h4>⚠️ Challenge 4: Data Quality at Scale</h4>
+                    <p><strong>Problem:</strong> Need to verify millions of images for authenticity, avoid duplicates, prevent spam.</p>
+                    <p><strong>Solution:</strong> Automated duplicate detection + GPS verification + admin review dashboard with ML-assisted flagging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Measure Success -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">How We Measure Success</h2>
+
+            <div class="prd-section">
+                <h3>1. Associated Goals & OKRs</h3>
+                <div class="metric-box">
+                    <h4>Objective: Build India's Most Comprehensive Rural Visual Dataset</h4>
+                    <ul style="line-height: 1.8; margin-top: 15px;">
+                        <li><strong>KR1:</strong> Collect ≥1,000 verified images per district across all 700+ districts in India</li>
+                        <li><strong>KR2:</strong> Achieve ≥90% village coverage (600K+ villages represented)</li>
+                        <li><strong>KR3:</strong> Maintain <15% rejection rate for submitted images (data quality threshold)</li>
+                        <li><strong>KR4:</strong> Complete verification within 48 hours per image (review turnaround time)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>2. Success Metrics</h3>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Target (Year 1)</th>
+                            <th>Why It Matters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Verified Images per District</strong></td>
+                            <td>≥ 1,000</td>
+                            <td>Ensures geographic diversity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Villages Covered</strong></td>
+                            <td>≥ 90% (540K+)</td>
+                            <td>Captures rural India comprehensively</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avg. Verification Time</strong></td>
+                            <td>< 48 hours</td>
+                            <td>Fast feedback loop for contributors</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rejection Rate</strong></td>
+                            <td>< 15%</td>
+                            <td>Quality control without demotivating users</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Active Contributors (Monthly)</strong></td>
+                            <td>10,000+</td>
+                            <td>Scalability and sustained data flow</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Flow & Wireframes -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Product Flow & Wireframes</h2>
+
+            <div class="prd-section">
+                <h3>1. Contributor User Journey</h3>
+                <div class="mermaid">
+graph TD
+    A[Open Mobile App<br/>PWA] --> B[Select State & District<br/>Dropdowns]
+    B --> C[Tap 'Start Upload'<br/>Button]
+    C --> D{Choose Source}
+    D -->|Camera| E[Capture New Photo]
+    D -->|Gallery| F[Upload Existing Image]
+    E --> G[Image Auto-Compressed<br/>GPS Tagged]
+    F --> G
+    G --> H[Add Description<br/>Text or Voice Input]
+    H --> I[Select Language<br/>Voice-to-Text]
+    I --> J[Review Screen<br/>Image + Caption + Location]
+    J --> K{Network Available?}
+    K -->|Yes| L[Submit Immediately]
+    K -->|No| M[Save Draft Locally<br/>Offline Mode]
+    M --> N[Auto-Sync when<br/>Online]
+    L --> O[Confirmation:<br/>'Submitted for Review']
+    N --> O
+    
+    style A fill:#10b981,color:#fff
+    style O fill:#10b981,color:#fff
+    style M fill:#f59e0b,color:#fff
+                </div>
+            </div>
+
+            <div class="prd-section" style="margin-top: 40px;">
+                <h3>2. Figma Wireframes (Mobile Screens)</h3>
+                <p style="margin-bottom: 20px;">
+                    <strong>Figma Link:</strong> <a href="https://www.figma.com/design/0mlWCweRglH0GtMNmmWhy8/Joshtalks-AI-Humanness-App" target="_blank" style="color: #10b981;">View Interactive Prototype →</a>
+                </p>
+
+                <!-- Embed uploaded image from PDF -->
+                <div class="wireframe-container">
+                    <h4>📱 Contributor Flow: Homepage → Upload → Review</h4>
+                    <p>Three-step mobile interface designed for simplicity and offline capability.</p>
+                    <img src="images/joshtalks/contributor-flow.png" alt="Contributor Flow Wireframes" class="wireframe-image">
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #718096;">
+                        <strong>Key Design Decisions:</strong>
+                    </p>
+                    <ul class="checklist" style="margin-top: 10px;">
+                        <li>Large touch targets for users with basic smartphone experience</li>
+                        <li>Voice input button prominent for low-literacy users</li>
+                        <li>Offline indicator ("will sync later") builds trust</li>
+                        <li>Language selector in top-right for easy switching</li>
+                    </ul>
+                </div>
+
+                <div class="wireframe-container">
+                    <h4>🖥️ Admin Dashboard: Review & Coverage Tracking</h4>
+                    <p>Desktop dashboard for internal team to verify submissions and track progress.</p>
+                    <img src="images/joshtalks/admin-dashboard.png" alt="Admin Dashboard Wireframes" class="wireframe-image">
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #718096;">
+                        <strong>Key Features:</strong>
+                    </p>
+                    <ul class="checklist" style="margin-top: 10px;">
+                        <li>District-wise coverage map with color-coded progress (82% approved shown)</li>
+                        <li>Filters by state, district, date, contributor type</li>
+                        <li>One-click actions: Approve, Reject, Flag for review</li>
+                        <li>Pending reviews count (65,650) for workload visibility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>3. Edge Case Handling</h3>
+                
+                <h4>Scenario 1: Weak or No Internet</h4>
+                <div class="callout info">
+                    <p><strong>Problem:</strong> Contributor in remote village has intermittent 2G connectivity.</p>
+                    <p><strong>Solution:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>All uploads cached locally using IndexedDB</li>
+                        <li>Visual indicator: "Offline - Will sync later" below submit button</li>
+                        <li>Auto-sync in background when network detected</li>
+                        <li>Push notification: "3 images synced successfully"</li>
+                    </ul>
+                </div>
+
+                <h4 style="margin-top: 25px;">Scenario 2: Very Short or Missing Description</h4>
+                <div class="callout info">
+                    <p><strong>Problem:</strong> Contributor types "cart" or leaves caption blank.</p>
+                    <p><strong>Solution:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>Smart nudge appears: "Try describing what you see, e.g., 'Bullock cart carrying hay in village'"</li>
+                        <li>Voice-to-text button encourages longer input for low-literacy users</li>
+                        <li>"Next" button disabled until minimum 3 words entered</li>
+                    </ul>
+                </div>
+
+                <h4 style="margin-top: 25px;">Scenario 3: Wrong GPS Location</h4>
+                <div class="callout info">
+                    <p><strong>Problem:</strong> GPS places user in wrong district (border area issue).</p>
+                    <p><strong>Solution:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>Confirmation prompt: "We detected Raipur District. Is this correct? [Yes] [Change]"</li>
+                        <li>Manual override via state/district dropdowns</li>
+                        <li>Corrected location saved for future uploads (reduces friction)</li>
+                    </ul>
+                </div>
+
+                <h4 style="margin-top: 25px;">Scenario 4: Low-Quality or Blurry Images</h4>
+                <div class="callout info">
+                    <p><strong>Problem:</strong> Contributor uploads dark/blurry photo reducing dataset quality.</p>
+                    <p><strong>Solution:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>Built-in blur detection warns before submission: "This photo seems unclear. [Retake] [Submit Anyway]"</li>
+                        <li>Admin can flag during review</li>
+                        <li>Repeated low-quality uploads reduce contributor's credibility score</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Quality Detection System (Part 2) -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Part 2: Automated Quality Detection System</h2>
+
+            <div class="prd-section">
+                <h3>Context: Transcription Quality Analysis</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    The second part of the assignment involved analyzing real transcription data from JoshTalks AI's platform to identify low-quality work patterns and design an automated detection system.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    <strong>Dataset provided:</strong> user_id, whisper_text, user_text, is_edited, duration, time_taken_by_user, segment_character_per_second
+                </p>
+            </div>
+
+            <div class="prd-section">
+                <h3>Identified Low-Quality Patterns</h3>
+                
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th>Detection Logic</th>
+                            <th>Red Flag Threshold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Incomplete Listening</strong></td>
+                            <td>time_taken < 0.5 × duration AND text < 4 words</td>
+                            <td>Contributor didn't listen to full audio</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Copy-Paste / AI Text</strong></td>
+                            <td>chars/sec > 15 OR identical to Whisper output</td>
+                            <td>Automated submission, no human review</td>
+                        </tr>
+                        <tr>
+                            <td><strong>False Blank Submission</strong></td>
+                            <td>text = "blank" OR empty BUT duration > 2 sec</td>
+                            <td>Skipping work, not genuinely inaudible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Idle Work / Fake Engagement</strong></td>
+                            <td>chars/sec < 0.5 AND time_taken > 2 × duration</td>
+                            <td>Left task running without actual work</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prd-section">
+                <h3>Proposed Detection System Architecture</h3>
+                <div class="mermaid">
+graph TB
+    A[User Submits<br/>Transcription] --> B[Calculate Metrics:<br/>Time Ratio, Chars/Sec]
+    B --> C{Check Pattern<br/>Rules}
+    
+    C -->|Incomplete Listening| D[Flag +1:<br/>Incomplete]
+    C -->|Copy-Paste| E[Flag +1:<br/>Automation]
+    C -->|False Blank| F[Flag +1:<br/>Blank]
+    C -->|Idle Work| G[Flag +1:<br/>Idle]
+    C -->|All Pass| H[No Flag]
+    
+    D --> I[Update Quality Score<br/>Per 20 Tasks]
+    E --> I
+    F --> I
+    G --> I
+    H --> I
+    
+    I --> J{Quality Score?}
+    J -->|90-100| K[High Quality Badge<br/>Bonus Opportunities]
+    J -->|70-89| L[Normal Status]
+    J -->|50-69| M[Soft Warning:<br/>Review Guidelines]
+    J -->|<50| N[24hr Hold +<br/>Manual Review]
+    
+    N --> O{Admin Confirms<br/>Low Quality?}
+    O -->|Yes| P[Permanent Block]
+    O -->|No| L
+    
+    style A fill:#10b981,color:#fff
+    style K fill:#10b981,color:#fff
+    style P fill:#dc2626,color:#fff
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>Quality Score Formula</h3>
+                <div class="callout success">
+                    <p style="font-size: 1.1rem;"><strong>Quality Score = 100 − (10 × total flags in last 20 tasks)</strong></p>
+                    <p style="margin-top: 15px;">Examples:</p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                        <li>0-2 flags → Score: 80-100 (Safe zone)</li>
+                        <li>3-5 flags → Score: 50-70 (Warning issued)</li>
+                        <li>6+ flags → Score: <50 (Manual review triggered)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>Progressive Warning System</h3>
+                
+                <div class="feature-list">
+                    <li><strong>Stage 1: Soft Warning (3-5 flags in 20 tasks)</strong>
+                        <br>Message: "Please ensure you're listening carefully and reviewing AI text before submitting."
+                        <br>Action: No restriction, educational nudge only</li>
+                    <li><strong>Stage 2: Temporary Hold (6+ flags, 24 hours)</strong>
+                        <br>Message: "Your recent submissions show low accuracy. Please take a short break and revisit the quality guide."
+                        <br>Action: Can reapply after refresher test</li>
+                    <li><strong>Stage 3: Manual Review (Multiple pattern types detected)</strong>
+                        <br>Admin reviews 3-5 random samples
+                        <br>Action: If confirmed poor → Proceed to suspension</li>
+                    <li><strong>Stage 4: Permanent Block (Repeated violations)</strong>
+                        <br>Triggered when: Time ratio <0.5 on ≥10 clips OR 85% unedited OR typing speed >15 chars/sec on ≥5 clips
+                        <br>Action: Account permanently blocked after admin verification</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MVP Features -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">MVP Features & Roadmap</h2>
+
+            <div class="prd-section">
+                <h3>Phase 1: MVP (Months 1-3)</h3>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Capture / Upload Image</strong></td>
+                            <td>Camera integration + gallery upload</td>
+                            <td>P0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multilingual Captions</strong></td>
+                            <td>Text + voice-to-text in 5 major languages</td>
+                            <td>P0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auto-Detect Location</strong></td>
+                            <td>GPS tagging with manual override</td>
+                            <td>P0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offline Draft + Sync</strong></td>
+                            <td>Local caching, background sync</td>
+                            <td>P1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Admin Verification Tools</strong></td>
+                            <td>Approve / Reject / Flag interface</td>
+                            <td>P0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>District Coverage Tracker</strong></td>
+                            <td>Progress visualization by region</td>
+                            <td>P1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="prd-section">
+                <h3>Phase 2: Scale & Quality (Months 4-6)</h3>
+                <ul class="feature-list">
+                    <li><strong>Duplicate Image Detection:</strong> AI-powered similarity matching to prevent resubmissions</li>
+                    <li><strong>Contributor Leaderboard:</strong> Gamification with top contributors recognition</li>
+                    <li><strong>Quality Score Dashboard:</strong> Real-time analytics on contributor performance</li>
+                    <li><strong>Expanded Language Support:</strong> Add 5 more regional languages (total 10)</li>
+                    <li><strong>Mobile App (Native Android):</strong> For power contributors who need offline capability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Learnings -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Key Learnings & Reflections</h2>
+            
+            <div class="insight-box">
+                <h4>💡 Offline-First is Non-Negotiable for Rural India</h4>
+                <p>Initial designs assumed stable 4G connectivity. User research (via interviewer feedback) revealed 70% of rural areas have only 2G. This forced me to redesign the entire architecture around local caching and background sync—a critical lesson in designing for context, not assumptions.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Voice Input > Text Input for Low-Literacy Users</h4>
+                <p>Making voice-to-text prominent (not hidden) increased estimated adoption by 3x based on similar studies. Many rural users can speak fluently but type slowly—designing for their strengths, not weaknesses, is key to inclusive product design.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Data Quality Detection Requires Behavioral Signals, Not Just Rules</h4>
+                <p>While analyzing transcription data, I learned that single metrics (like typing speed) are unreliable. Combining 4 behavioral patterns (time ratio, chars/sec, edit activity, content meaning) created a robust detection system with <10% false positives.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Progressive Warnings > Immediate Bans</h4>
+                <p>Designing the 4-stage warning system taught me that good PMs balance enforcement with empathy. Soft warnings give genuine users a chance to improve, while repeated violations trigger escalation—this builds trust while maintaining data quality.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Figma Prototypes Accelerate Stakeholder Alignment</h4>
+                <p>Creating interactive Figma mockups made the submission 10x more concrete than a text-only PRD. Visual artifacts help non-technical stakeholders (and interviewers!) immediately grasp the product vision, reducing back-and-forth iterations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Expected Outcomes & Impact</h2>
+
+            <div class="prd-section">
+                <h3>If Implemented, Humanness Platform Would:</h3>
+                <ul class="feature-list">
+                    <li><strong>Collect millions of authentic images</strong> from 600K+ villages across India, creating the world's most comprehensive rural visual dataset</li>
+                    <li><strong>Train culturally-aware AI models</strong> that understand Indian contexts (agriculture, festivals, infrastructure) as well as they understand Western scenes</li>
+                    <li><strong>Enable AI applications in underserved markets</strong> such as precision agriculture, rural healthcare diagnostics, infrastructure monitoring</li>
+                    <li><strong>Empower rural communities</strong> to shape technology that serves them, not just urban populations</li>
+                    <li><strong>Position JoshTalks AI</strong> as a leader in inclusive AI for emerging markets, differentiating from Western-focused competitors</li>
+                </ul>
+            </div>
+
+            <div class="callout success" style="margin-top: 30px;">
+                <h4>📊 Projected Metrics (Year 1)</h4>
+                <ul style="margin-top: 10px; line-height: 1.8;">
+                    <li>1M+ verified images collected</li>
+                    <li>90% of Indian districts covered (630+ districts)</li>
+                    <li>10,000+ active monthly contributors</li>
+                    <li><15% rejection rate (quality control)</li>
+                    <li><48 hour average verification time</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Neel Maddheshiya. <a href="index.html" style="color: white; opacity: 0.8;">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html>

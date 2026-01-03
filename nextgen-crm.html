@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen CRM - Neel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'neutral',
+            themeVariables: {
+                primaryColor: '#8b5cf6',
+                primaryTextColor: '#2d3748',
+                primaryBorderColor: '#8b5cf6',
+                lineColor: '#a0aec0',
+                secondaryColor: '#f7fafc',
+                tertiaryColor: '#edf2f7'
+            }
+        });
+    </script>
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-hero .tagline {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #8b5cf6;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .prd-table {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .prd-table tr {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .prd-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .prd-table td {
+            padding: 20px;
+        }
+
+        .prd-table td:first-child {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+            width: 30%;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .prd-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+
+        .prd-section h3 {
+            color: #8b5cf6;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .prd-section h4 {
+            color: #2d3748;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .metric-box {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .metric-box h4 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .persona-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #8b5cf6;
+            margin: 15px 0;
+        }
+
+        .persona-card h4 {
+            color: #8b5cf6;
+            margin-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 15px;
+            background: #f7fafc;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .feature-list li strong {
+            color: #8b5cf6;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .timeline-table th {
+            background: #8b5cf6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .timeline-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .timeline-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .insight-box {
+            background: #f5f3ff;
+            border-left: 4px solid #8b5cf6;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .insight-box h4 {
+            color: #5b21b6;
+            margin-bottom: 10px;
+        }
+
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+
+        .callout {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .callout.success {
+            background: #f0fff4;
+            border-left-color: #68d391;
+        }
+
+        .callout.info {
+            background: #ebf8ff;
+            border-left-color: #4299e1;
+        }
+
+        ul.checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.checklist li:before {
+            content: "✓ ";
+            color: #8b5cf6;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .wireframe-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
+
+        .wireframe-container h4 {
+            color: #8b5cf6;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .wireframe-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+            border-radius: 8px;
+            border: 2px dashed #cbd5e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #718096;
+        }
+
+        .wireframe-placeholder p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .tool-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tool-badge {
+            background: white;
+            border: 2px solid #8b5cf6;
+            color: #8b5cf6;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .abtest-result {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .variant-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .variant-card.winner {
+            border-color: #10b981;
+            background: #f0fff4;
+        }
+
+        .variant-label {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+
+        .variant-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #8b5cf6;
+        }
+
+        .winner-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <h1>NexGen CRM</h1>
+            <p class="tagline">Onboarding Growth & Conversion Optimization</p>
+            <p class="tagline" style="font-size: 1.1rem; margin-top: 10px;">Increasing User Activation by 20% Through Data-Driven A/B Testing</p>
+        </div>
+    </div>
+
+    <!-- PRD Header -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Product Overview</h2>
+            <table class="prd-table">
+                <tr>
+                    <td>Title/Initiative</td>
+                    <td><strong>NexGen CRM: Onboarding Redesign for Activation & Retention</strong></td>
+                </tr>
+                <tr>
+                    <td>Date & Version</td>
+                    <td>January 2025 | Version 2.0 (Onboarding Overhaul)</td>
+                </tr>
+                <tr>
+                    <td>Product - Point of Contact (POC)</td>
+                    <td>Neel Maddheshiya - Growth PM</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>✅ Launched | Post-Launch Optimization Phase</td>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>Web App (React) + Mobile Responsive</td>
+                </tr>
+            </table>
+
+            <!-- PM Tools Used -->
+            <div class="prd-section" style="margin-top: 30px;">
+                <h3>🛠️ PM Tools & Workflow</h3>
+                <div class="tool-badge-container">
+                    <div class="tool-badge">📊 Figma - Onboarding Flows [Coming Soon]</div>
+                    <div class="tool-badge">📈 Amplitude - Funnel Analysis</div>
+                    <div class="tool-badge">🧪 Optimizely - A/B Testing Platform</div>
+                    <div class="tool-badge">📋 Notion - Experiment Documentation</div>
+                    <div class="tool-badge">🎯 Mixpanel - Event Tracking</div>
+                    <div class="tool-badge">🔗 Zapier - User Onboarding Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why? (Objective) -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Why? (Objective)</h2>
+            
+            <div class="prd-section">
+                <h3>1. For Business</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    NexGen CRM is a mid-market SaaS platform for sales teams (500-5,000 employees). Despite strong top-of-funnel traffic (10K+ signups/month), only <strong>35% of users activated</strong> (defined as completing 3+ key actions in first 7 days). This poor activation rate created a leaky bucket—high acquisition costs with low retention.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    <strong>Business Impact of Low Activation:</strong>
+                </p>
+                <ul style="font-size: 1.05rem; line-height: 1.8; margin-left: 20px;">
+                    <li>$500K/month wasted on CAC (Customer Acquisition Cost) for users who never activate</li>
+                    <li>Activated users have 5x higher LTV (Lifetime Value) vs. non-activated</li>
+                    <li>Competitor analysis showed best-in-class SaaS has 55-60% activation rates</li>
+                    <li>Each 10% improvement in activation = $200K additional MRR (Monthly Recurring Revenue)</li>
+                </ul>
+            </div>
+
+            <div class="prd-section">
+                <h3>2. For Users</h3>
+                
+                <div class="persona-card">
+                    <h4>👤 Primary: Sales Manager (New User)</h4>
+                    <p><strong>Who they are:</strong> Mid-level sales manager at B2B SaaS company, managing 5-15 reps</p>
+                    <p><strong>Current Problem:</strong> "I signed up for NexGen CRM but got overwhelmed by 50+ features in the dashboard. I didn't know where to start, so I just closed the tab and went back to our old spreadsheet."</p>
+                    <p><strong>What They Need:</strong> Clear, step-by-step guidance to set up their first pipeline, import contacts, and see value within 10 minutes</p>
+                    <p><strong>Value Delivered:</strong> Progressive onboarding that teaches features as needed, not all at once</p>
+                </div>
+
+                <div class="persona-card">
+                    <h4>💼 Secondary: Sales Rep (End User)</h4>
+                    <p><strong>Who they are:</strong> Individual contributor who will use NexGen CRM daily for deal tracking</p>
+                    <p><strong>Current Problem:</strong> "My manager added me to NexGen, but I have no idea how to log a call or update deal stages. The help docs are too long—I just need someone to show me once."</p>
+                    <p><strong>What They Need:</strong> Interactive tooltips and product tours that teach by doing, not reading</p>
+                    <p><strong>Value Delivered:</strong> Contextual guidance that appears exactly when they need it</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Measure Success -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">How We Measure Success</h2>
+
+            <div class="prd-section">
+                <h3>1. Associated OKR/Goal</h3>
+                <div class="metric-box">
+                    <h4>Q4 2024 Objective: Increase User Activation from 35% to 55%</h4>
+                    <ul style="line-height: 1.8; margin-top: 15px;">
+                        <li><strong>KR1:</strong> Improve 7-day activation rate from 35% → 55% (+20 percentage points)</li>
+                        <li><strong>KR2:</strong> Reduce time-to-first-value from 45 minutes → 10 minutes</li>
+                        <li><strong>KR3:</strong> Increase trial-to-paid conversion from 12% → 18%</li>
+                        <li><strong>KR4:</strong> Ship 5+ A/B tests on onboarding flow with ≥95% statistical confidence</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>2. Success Metrics (Tracked in Amplitude + Mixpanel)</h3>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Baseline</th>
+                            <th>Target</th>
+                            <th>Current</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>7-Day Activation Rate</strong></td>
+                            <td>35%</td>
+                            <td>55%</td>
+                            <td>✅ 52% (close to target)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Time to First Value</strong></td>
+                            <td>45 min</td>
+                            <td>10 min</td>
+                            <td>✅ 12 min (within range)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trial-to-Paid Conversion</strong></td>
+                            <td>12%</td>
+                            <td>18%</td>
+                            <td>✅ 17.5% (beating target)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Onboarding Completion Rate</strong></td>
+                            <td>28%</td>
+                            <td>50%</td>
+                            <td>✅ 48% (on track)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Feature Discovery (3+ features used)</strong></td>
+                            <td>22%</td>
+                            <td>40%</td>
+                            <td>⚠️ 35% (needs improvement)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout success" style="margin-top: 20px;">
+                    <h4>📊 Amplitude Funnel Tracking:</h4>
+                    <ul style="margin-top: 10px; line-height: 1.8;">
+                        <li><code>signup_completed</code> → <code>onboarding_started</code> → <code>first_pipeline_created</code> → <code>contact_imported</code> → <code>deal_logged</code> → <code>activation</code></li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Activation Definition:</strong> User who completes ≥3 of these actions in first 7 days</p>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>3. Guardrail Metrics</h3>
+                <ul class="feature-list">
+                    <li><strong>User Satisfaction (CSAT):</strong> Must remain ≥ 4.2/5 (no "annoying" onboarding)</li>
+                    <li><strong>Support Ticket Volume:</strong> Should not increase >10% (onboarding clarity test)</li>
+                    <li><strong>Page Load Time:</strong> Onboarding screens must load in <2 seconds (performance threshold)</li>
+                    <li><strong>Mobile Responsive Experience:</strong> 40%+ of signups on mobile, must work flawlessly</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- A/B Testing Case Study -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">A/B Testing Case Study: "Success-First" Onboarding</h2>
+
+            <div class="prd-section">
+                <h3>The Hypothesis</h3>
+                <div class="callout info">
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <strong>Hypothesis:</strong> New users are more likely to activate if they experience a "quick win" (complete a simple task) within the first 5 minutes, rather than being shown feature tours or empty dashboards.
+                    </p>
+                    <p style="margin-top: 15px;"><strong>Inspiration:</strong> Behavioral psychology research shows people are 3x more likely to continue a task after achieving early success (progress principle).</p>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>Experiment Design</h3>
+                
+                <h4>Control (Variant A): Traditional Onboarding</h4>
+                <div class="mermaid">
+graph LR
+    A[User Signs Up] --> B[Welcome Screen<br/>Feature Overview]
+    B --> C[Empty Dashboard<br/>Prompts to Explore]
+    C --> D[Self-Guided Setup<br/>No Direction]
+    D --> E{Outcome}
+    E -->|65%| F[User Churns<br/>Never Returns]
+    E -->|35%| G[User Activates<br/>After 45+ min]
+    
+    style F fill:#dc2626,color:#fff
+    style G fill:#10b981,color:#fff
+                </div>
+
+                <h4 style="margin-top: 30px;">Treatment (Variant B): "Success-First" Onboarding</h4>
+                <div class="mermaid">
+graph LR
+    A[User Signs Up] --> B[Instant Action:<br/>Import 5 Contacts]
+    B --> C[Progress Bar Shows<br/>60% Complete]
+    C --> D[Create First Deal<br/>Guided Workflow]
+    D --> E[Celebration Moment<br/>Confetti Animation]
+    E --> F{Outcome}
+    F -->|48%| G[User Churns]
+    F -->|52%| H[User Activates<br/>After 12 min]
+    
+    style H fill:#10b981,color:#fff
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>A/B Test Results (Using Optimizely)</h3>
+                
+                <div class="abtest-result">
+                    <div class="variant-card">
+                        <div class="variant-label">Control</div>
+                        <div class="variant-name">Variant A: Traditional</div>
+                        <div class="metric-row">
+                            <span>Activation Rate</span>
+                            <span class="metric-value">35%</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Avg. Time to Activate</span>
+                            <span class="metric-value">45 min</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Trial Conversion</span>
+                            <span class="metric-value">12%</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Sample Size</span>
+                            <span style="font-size: 0.9rem;">5,000 users</span>
+                        </div>
+                    </div>
+
+                    <div class="variant-card winner">
+                        <div class="variant-label">Treatment <span class="winner-badge">WINNER ✓</span></div>
+                        <div class="variant-name">Variant B: Success-First</div>
+                        <div class="metric-row">
+                            <span>Activation Rate</span>
+                            <span class="metric-value" style="color: #10b981;">52%</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Avg. Time to Activate</span>
+                            <span class="metric-value" style="color: #10b981;">12 min</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Trial Conversion</span>
+                            <span class="metric-value" style="color: #10b981;">17.5%</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Sample Size</span>
+                            <span style="font-size: 0.9rem;">5,000 users</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout success" style="margin-top: 30px;">
+                    <h4>📊 Statistical Significance</h4>
+                    <ul style="margin-top: 10px; line-height: 1.8;">
+                        <li><strong>Lift in Activation:</strong> +17 percentage points (+48.6% relative improvement)</li>
+                        <li><strong>Confidence Level:</strong> 99.5% (p-value: 0.005)</li>
+                        <li><strong>Recommendation:</strong> ✅ Ship Variant B to 100% of users</li>
+                        <li><strong>Projected Impact:</strong> +$200K MRR from improved activation alone</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3>Additional A/B Tests Run (5-Test Optimization Roadmap)</h3>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Test Name</th>
+                            <th>Hypothesis</th>
+                            <th>Result</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Progress Bar</strong></td>
+                            <td>Showing completion % increases task finish rate</td>
+                            <td>+22% completion (99% confidence)</td>
+                            <td>✅ Shipped</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Social Proof</strong></td>
+                            <td>"2,300 teams joined this week" increases trust</td>
+                            <td>+8% signup-to-trial (95% confidence)</td>
+                            <td>✅ Shipped</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Video Tutorial</strong></td>
+                            <td>30-second video > text instructions</td>
+                            <td>No significant lift (p=0.12)</td>
+                            <td>❌ Rejected</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gamification</strong></td>
+                            <td>Badge rewards for onboarding steps</td>
+                            <td>+15% engagement, but no activation lift</td>
+                            <td>⚠️ Needs iteration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email Drip Sequence</strong></td>
+                            <td>5-email onboarding series boosts activation</td>
+                            <td>+12% activation (98% confidence)</td>
+                            <td>✅ Shipped</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Flow & Wireframes -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Product Flow & Wireframes</h2>
+
+            <div class="prd-section">
+                <h3>1. Success-First Onboarding Flow</h3>
+                <div class="mermaid">
+graph TD
+    A[User Signs Up<br/>Email + Password] --> B[Welcome: 'Let's Get You Set Up'<br/>Progress: 0/5]
+    B --> C[Step 1: Import 5 Contacts<br/>CSV Upload or Manual Entry]
+    C --> D[Progress: 1/5 ✓<br/>Micro-Celebration]
+    D --> E[Step 2: Create First Pipeline<br/>Pre-Filled Template]
+    E --> F[Progress: 2/5 ✓]
+    F --> G[Step 3: Log Sample Deal<br/>Guided Form]
+    G --> H[Progress: 3/5 ✓]
+    H --> I{Activation Achieved}
+    I --> J[Confetti Animation<br/>'You're All Set!']
+    J --> K[Optional: Complete Remaining<br/>Steps 4-5 or Skip]
+    K --> L[Enter Main Dashboard<br/>With Pre-Populated Data]
+    
+    style A fill:#8b5cf6,color:#fff
+    style I fill:#10b981,color:#fff
+    style L fill:#3b82f6,color:#fff
+                </div>
+            </div>
+
+            <div class="prd-section" style="margin-top: 40px;">
+                <h3>2. Wireframes (Coming Soon - Figma)</h3>
+                
+                <div class="wireframe-container">
+                    <h4>📱 Onboarding Step 1: Import Contacts</h4>
+                    <div class="wireframe-placeholder">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#cbd5e0" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v8m-4-4h8"/>
+                        </svg>
+                        <p>Wireframes will be created in Figma</p>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">[Progress bar at top → CSV upload → Success confirmation]</p>
+                    </div>
+                </div>
+
+                <div class="wireframe-container">
+                    <h4>🎉 Activation Moment: Confetti Celebration</h4>
+                    <div class="wireframe-placeholder">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#cbd5e0" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        <p>Wireframes will be created in Figma</p>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">[Animated confetti → Success message → CTA to dashboard]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zapier Automation -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Onboarding Automation (Using Zapier)</h2>
+
+            <div class="prd-section">
+                <h3>Automated Email Drip Sequence</h3>
+                <div class="callout info">
+                    <p><strong>Zap Workflow:</strong> When user signs up but doesn't activate in 24 hours → Trigger email sequence</p>
+                </div>
+
+                <div class="mermaid">
+graph LR
+    A[User Signs Up] --> B{Activated in<br/>24 hours?}
+    B -->|Yes| C[No Email Sent]
+    B -->|No| D[Zapier Triggers<br/>Email Sequence]
+    D --> E[Day 1: Welcome +<br/>Quick Start Guide]
+    E --> F[Day 3: Feature<br/>Spotlight Video]
+    F --> G[Day 5: Success Story<br/>Customer Testimonial]
+    G --> H[Day 7: Personal<br/>Onboarding Call Offer]
+    H --> I{User Activates?}
+    I -->|Yes| J[Success!<br/>Convert to Customer]
+    I -->|No| K[Mark as Churned<br/>Win-Back Campaign]
+    
+    style A fill:#8b5cf6,color:#fff
+    style J fill:#10b981,color:#fff
+    style K fill:#dc2626,color:#fff
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h4>Email Sequence Performance:</h4>
+                    <ul class="feature-list">
+                        <li><strong>Open Rate:</strong> 42% (industry avg: 22%)</li>
+                        <li><strong>Click-Through Rate:</strong> 18% (industry avg: 3.5%)</li>
+                        <li><strong>Activation Lift:</strong> +12% for users who receive sequence vs. control</li>
+                        <li><strong>Tool Stack:</strong> Zapier → Mailchimp → Amplitude (tracking)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Learnings -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Key Learnings & Growth Insights</h2>
+            
+            <div class="insight-box">
+                <h4>💡 Empty State = Activation Killer</h4>
+                <p>Users who saw an empty dashboard (Control) had 2x higher bounce rate than those who saw pre-populated data (Treatment). Lesson: Never show users a blank slate—seed their account with sample data or auto-complete forms to reduce cognitive load.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Progress Bars Drive 22% More Completion</h4>
+                <p>Adding a simple "3/5 steps complete" progress bar increased onboarding completion from 28% → 50%. Psychology: People feel compelled to finish tasks they've already started (Zeigarnik effect). Small UI change, massive behavioral impact.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Not All A/B Tests Win (And That's OK)</h4>
+                <p>The video tutorial test failed (no significant lift). Instead of being discouraged, we learned that users prefer "learning by doing" over passive watching. This informed our next test: interactive tooltips, which increased engagement 18%.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Activation → Retention → Revenue</h4>
+                <p>Users who activated in first 7 days had 5x higher 30-day retention (85% vs. 17%). They also converted to paid at 3x the rate (17.5% vs. 6%). This proved that activation is the most important lever for SaaS growth—not signup volume.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 Zapier = Poor Man's Marketing Automation</h4>
+                <p>Before building a custom onboarding email system (6-week eng project), we tested the drip sequence using Zapier + Mailchimp in 2 hours. Validated the concept, saw +12% lift, then justified the eng investment for a polished solution.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Neel Maddheshiya. <a href="index.html" style="color: white; opacity: 0.8;">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html>
