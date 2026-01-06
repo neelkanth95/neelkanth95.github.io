@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinEdge</title>
+    <title>FinEdge - Neelkanth's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({ 
-            startOnLoad: true,
+            startOnLoad: true, 
             theme: 'neutral',
             themeVariables: {
                 primaryColor: '#667eea',
@@ -38,6 +38,16 @@
             opacity: 0.95;
             max-width: 800px;
             margin: 0 auto 15px auto;
+        }
+
+        .portfolio-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
         .back-link {
@@ -234,7 +244,7 @@
         }
 
         ul.checklist li:before {
-            content: "✓ ";
+            content: "\2713 ";
             color: #68d391;
             font-weight: bold;
             margin-right: 8px;
@@ -244,10 +254,13 @@
 <body>
     <div class="project-hero">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
             <h1>FinEdge</h1>
-            <p class="tagline">Smart Credit Scoring & Churn Prevention Engine</p>
-            <p class="tagline" style="font-size: 1.1rem; margin-top: 10px;">Product Requirements Document (PRD)</p>
+            <p class="tagline">Smart Credit Scoring &amp; Churn Prevention Engine</p>
+            <p class="tagline" style="font-size: 1.1rem; margin-top: 10px;">
+                Product Requirements Document (Portfolio Case Study)
+            </p>
+            <div class="portfolio-badge">&#127919; PM Portfolio Project</div>
         </div>
     </div>
 
@@ -257,65 +270,66 @@
             <h2 class="section-title">Product Overview</h2>
             <table class="prd-table">
                 <tr>
-                    <td>Title/Initiative</td>
-                    <td><strong>FinEdge: Smart Credit Scoring & Churn Prevention Engine</strong></td>
-                </tr>
-                <tr>
-                    <td>Date & Version</td>
-                    <td>January 2025 | Version 1.0</td>
-                </tr>
-                <tr>
-                    <td>Product - Point of Contact (POC)</td>
-                    <td>Neelkanth [Your Last Name] - Associate Product Manager</td>
+                    <td>Initiative</td>
+                    <td><strong>FinEdge: Smart Credit Scoring &amp; Churn Prevention Engine</strong></td>
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td>✅ MVP Launched | Pilot Phase (5 Banks)</td>
+                    <td>Concept PRD (Portfolio Showcase)</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>Neelkanth Maddheshiya - Product Manager</td>
                 </tr>
                 <tr>
                     <td>Platform</td>
-                    <td>Web Dashboard (React) + API (FastAPI)</td>
+                    <td>B2B Web Dashboard (React) + ML API (FastAPI)</td>
                 </tr>
             </table>
+
+            <div class="prd-section" style="margin-top: 30px;">
+                <h3>&#127919; Context</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    FinEdge is a portfolio case study designed to demonstrate how I approach a real-world product problem from first principles. The problem, assumptions, workflows, and metrics are grounded in industry research and common challenges faced by banks and credit card issuers.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    I treated this exercise like a real product initiative, starting with the business problem, validating user pain points, defining success metrics, and designing a solution that balances machine learning capability with operational reality.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Why? (Objective) -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Why? (Objective)</h2>
+            <h2 class="section-title">Why This Problem</h2>
             
             <div class="prd-section">
-                <h3>1. For Business</h3>
+                <h3>Business Perspective</h3>
                 <p style="font-size: 1.05rem; line-height: 1.8;">
-                    Banks lose <strong>15-20% of credit card customers annually</strong>, costing the financial services industry <strong>$136 billion</strong> in preventable attrition. The cost of acquiring a new customer is <strong>5x higher</strong> than retaining an existing one, yet most banks rely on reactive churn detection—only learning customers are leaving when they close their accounts.
+                    Customer churn in credit cards rarely happens overnight. In most cases, customers show early warning signs weeks in advance: reduced spend, repeated support calls, or disengagement. Despite this, many banks only react once a cancellation request is raised.
                 </p>
                 <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
-                    <strong>Business Impact:</strong>
+                    Banks lose 15% to 20% of credit card customers annually, costing the financial services industry $136 billion in preventable attrition. The cost of acquiring a new customer is 5 times higher than retaining an existing one, yet retention teams often lack a single, actionable view that combines behavioral signals, customer value, and next best actions.
                 </p>
-                <ul style="font-size: 1.05rem; line-height: 1.8; margin-left: 20px;">
-                    <li>Reduce churn rate by 15% (from 24% to 20.4%)</li>
-                    <li>Generate $2.3M incremental revenue per 100K customers annually</li>
-                    <li>Improve customer lifetime value (CLV) by retaining high-value accounts</li>
-                    <li>Optimize retention budget allocation with data-driven offer recommendations</li>
-                </ul>
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    This leads to delayed interventions and inefficient use of retention budgets.
+                </p>
             </div>
 
             <div class="prd-section">
-                <h3>2. For Users</h3>
+                <h3>User Perspective</h3>
                 
                 <div class="persona-card">
-                    <h4>👔 Sarah - Relationship Manager</h4>
-                    <p><strong>Current Problem:</strong> "I only find out customers are leaving when they call to cancel. By then, it's too late to save them."</p>
-                    <p><strong>What She Needs:</strong> Early warning system that flags at-risk customers before they churn, with pre-approved retention offers she can send with one click.</p>
-                    <p><strong>Value Delivered:</strong> Proactive alerts 30 days before predicted churn + recommended actions based on customer value.</p>
+                    <h4>Relationship Manager (Primary User)</h4>
+                    <p><strong>Pain:</strong> "I only find out customers are unhappy when they call to cancel. By then, it's too late to save them."</p>
+                    <p><strong>Need:</strong> A simple daily view showing which customers need attention today, and why. Early warning system that flags at-risk customers before they churn, with pre-approved retention offers she can send with one click.</p>
                 </div>
 
                 <div class="persona-card">
-                    <h4>💼 Michelle - VP of Retention</h4>
-                    <p><strong>Current Problem:</strong> "We're spending millions on retention offers, but I can't tell which tactics actually work or if we're just giving discounts to customers who would've stayed anyway."</p>
-                    <p><strong>What She Needs:</strong> Executive dashboard showing churn trends, retention ROI, and which customer segments respond best to which offers.</p>
-                    <p><strong>Value Delivered:</strong> Real-time metrics on retention program effectiveness + predictive insights to optimize budget allocation.</p>
+                    <h4>VP of Retention (Secondary User)</h4>
+                    <p><strong>Pain:</strong> "We spend heavily on retention, but I can't clearly see what's working. Are we just giving discounts to customers who would've stayed anyway?"</p>
+                    <p><strong>Need:</strong> Visibility into churn trends, ROI, and segment-level effectiveness. Executive dashboard showing retention program performance and which customer segments respond best to which offers.</p>
                 </div>
             </div>
         </div>
@@ -324,30 +338,31 @@
     <!-- How We Measure Success -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">How We Measure Success</h2>
+            <h2 class="section-title">Success Metrics</h2>
 
             <div class="prd-section">
-                <h3>1. Associated OKR/Goal</h3>
-                <div class="metric-box">
-                    <h4>Q1 2025 Objective: Reduce Customer Churn Through Predictive Retention</h4>
-                    <ul style="line-height: 1.8; margin-top: 15px;">
-                        <li><strong>KR1:</strong> Reduce churn rate from 24% to 20.4% (15% reduction) across pilot banks</li>
-                        <li><strong>KR2:</strong> Generate $2M+ incremental revenue from retained customers</li>
-                        <li><strong>KR3:</strong> Achieve 80%+ precision in churn prediction model (avoid false positives)</li>
-                        <li><strong>KR4:</strong> Onboard 5 pilot banks and achieve 70%+ weekly active usage among relationship managers</li>
-                    </ul>
-                </div>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    Success for FinEdge is not just model accuracy. It's measured by whether users trust the system, use it consistently, and whether it leads to meaningful churn reduction.
+                </p>
+
+                <ul class="feature-list">
+                    <li><strong>Primary Outcome:</strong> Reduce churn rate from 24% to 20.4% (15% reduction) across pilot segments</li>
+                    <li><strong>Adoption:</strong> 70% or higher weekly active usage among relationship managers</li>
+                    <li><strong>Model Precision:</strong> 80% or higher precision with low false positives (under 20%)</li>
+                    <li><strong>Operational Fit:</strong> Actions taken within existing workflows without disruption</li>
+                    <li><strong>Revenue Impact:</strong> $2M or more incremental revenue from retained customers</li>
+                </ul>
             </div>
 
             <div class="prd-section">
-                <h3>2. Success Metrics</h3>
+                <h3>Projected Performance</h3>
                 <table class="timeline-table">
                     <thead>
                         <tr>
                             <th>Metric</th>
                             <th>Baseline</th>
                             <th>Target (6 months)</th>
-                            <th>Current Status</th>
+                            <th>Notes</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -355,112 +370,76 @@
                             <td><strong>Churn Rate</strong></td>
                             <td>24%</td>
                             <td>20.4%</td>
-                            <td>✅ 21.2% (on track)</td>
+                            <td>15% reduction through early intervention</td>
                         </tr>
                         <tr>
                             <td><strong>Model Precision</strong></td>
-                            <td>—</td>
+                            <td>N/A</td>
                             <td>80%</td>
-                            <td>✅ 80% (meeting target)</td>
+                            <td>Balance between recall and false positives</td>
                         </tr>
                         <tr>
-                            <td><strong>Offer Acceptance Rate</strong></td>
-                            <td>—</td>
+                            <td><strong>Offer Acceptance</strong></td>
+                            <td>N/A</td>
                             <td>50%</td>
-                            <td>✅ 45% (close to target)</td>
+                            <td>Personalized offers drive higher acceptance</td>
                         </tr>
                         <tr>
-                            <td><strong>Incremental Revenue</strong></td>
-                            <td>$0</td>
-                            <td>$2M+</td>
-                            <td>✅ $1.8M (90% of target)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>User Adoption (MAU)</strong></td>
+                            <td><strong>Weekly Active Users</strong></td>
                             <td>0</td>
                             <td>400 RMs</td>
-                            <td>⚠️ 320 RMs (need improvement)</td>
+                            <td>Across 5 pilot banks</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="prd-section">
-                <h3>3. Guardrail Metrics (Do Not Disturb)</h3>
-                <p style="font-size: 1.05rem; margin-bottom: 15px;">These metrics should <strong>not</strong> be negatively affected by FinEdge:</p>
+                <h3>Guardrails</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 15px;">These metrics should not be negatively affected:</p>
                 <ul class="feature-list">
-                    <li><strong>Customer Satisfaction (NPS):</strong> Should remain ≥ 65 (customers shouldn't feel spammed with offers)</li>
-                    <li><strong>Retention Offer Cost:</strong> Should not exceed $350 per customer (budget constraint)</li>
-                    <li><strong>False Positive Rate:</strong> Must stay below 20% (avoid wasting offers on safe customers)</li>
-                    <li><strong>API Latency:</strong> Dashboard must load in <3 seconds (user experience threshold)</li>
+                    <li><strong>Customer Satisfaction:</strong> NPS should remain at 65 or higher</li>
+                    <li><strong>Retention Cost:</strong> Should not exceed $350 per customer</li>
+                    <li><strong>Dashboard Load Time:</strong> Must load in under 3 seconds</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Who Are the Users -->
+    <!-- User Research -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Who Are the Users</h2>
+            <h2 class="section-title">User Research &amp; Validation</h2>
 
             <div class="prd-section">
-                <h3>1. Personas</h3>
-                
-                <div class="persona-card">
-                    <h4>Primary: Sarah - Relationship Manager</h4>
-                    <p><strong>Demographics:</strong> 28-45 years old, manages 500-800 high-value credit card accounts ($50K+ annual spend)</p>
-                    <p><strong>Tech Comfort:</strong> Medium (uses Salesforce daily, comfortable with dashboards)</p>
-                    <p><strong>Daily Workflow:</strong> Morning review of account health → Follow up on alerts → Customer outreach</p>
-                    <p><strong>Success Metric:</strong> Quarterly retention targets (bonus tied to churn reduction)</p>
-                </div>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    For this portfolio project, research insights are simulated but based on patterns observed in similar B2B fintech workflows and industry studies.
+                </p>
 
-                <div class="persona-card">
-                    <h4>Secondary: Michelle - VP of Retention</h4>
-                    <p><strong>Demographics:</strong> 35-55 years old, oversees retention strategy for entire credit card portfolio</p>
-                    <p><strong>Tech Comfort:</strong> High (uses Tableau, data analysis tools)</p>
-                    <p><strong>Decision Criteria:</strong> ROI of retention programs, budget efficiency, strategic insights</p>
-                    <p><strong>Success Metric:</strong> Overall churn rate, cost-per-retention, program effectiveness</p>
-                </div>
+                <h4 style="margin-top: 25px;">Key Insights:</h4>
+                <ul class="feature-list">
+                    <li><strong>Scattered Signals:</strong> Early churn indicators exist but are spread across multiple systems (CRM, support tickets, transaction logs)</li>
+                    <li><strong>Manual Prioritization:</strong> RMs prioritize customers manually without clear risk ranking or customer value context</li>
+                    <li><strong>Approval Delays:</strong> Retention offers are often delayed 5 to 7 days due to approval processes, missing the intervention window</li>
+                    <li><strong>No Feedback Loop:</strong> Limited visibility into which retention tactics work for which customer segments</li>
+                    <li><strong>Reactive Mindset:</strong> Teams only act when customers call to cancel, rather than identifying risk proactively</li>
+                </ul>
             </div>
 
             <div class="prd-section">
-                <h3>2. Problems We Are Solving (Jobs to Be Done)</h3>
+                <h3>Problems We Are Solving</h3>
                 
                 <div class="callout">
                     <p><strong>Job to Be Done:</strong> "When I start my workday, I need to know which customers are at risk of leaving so that I can proactively reach out with the right retention offer before it's too late."</p>
                 </div>
 
-                <h4>Key Pain Points:</h4>
+                <h4 style="margin-top: 25px;">Core Pain Points:</h4>
                 <ul class="feature-list">
-                    <li><strong>Reactive Detection:</strong> Current tools only flag churn after customers cancel—too late for intervention</li>
-                    <li><strong>No Prioritization:</strong> RMs don't know which at-risk customers to focus on first (CLV-based prioritization missing)</li>
-                    <li><strong>Manual Offer Selection:</strong> Takes 5-7 days to get approval for retention offers; opportunity window closes</li>
-                    <li><strong>No Feedback Loop:</strong> Can't measure which offers work for which customer segments</li>
-                    <li><strong>Siloed Data:</strong> Transaction data, support tickets, and engagement metrics aren't connected</li>
+                    <li>Current tools only flag churn after customers cancel</li>
+                    <li>No CLV-based prioritization of at-risk customers</li>
+                    <li>Manual offer selection with long approval cycles</li>
+                    <li>Transaction data, support tickets, and engagement metrics aren't connected</li>
                 </ul>
-            </div>
-
-            <div class="prd-section">
-                <h3>3. How We Know These Problems Exist (Research)</h3>
-                
-                <div class="callout info">
-                    <h4>Discovery Research (October 2024)</h4>
-                    <ul style="margin-top: 10px; line-height: 1.8;">
-                        <li><strong>User Interviews:</strong> 12 relationship managers across 3 pilot banks</li>
-                        <li><strong>Key Finding:</strong> 9 out of 12 said "I wish I knew customers were unhappy before they called to cancel"</li>
-                        <li><strong>Data Analysis:</strong> 68% of churned customers showed early warning signs (transaction drop, support calls) 30+ days before canceling</li>
-                        <li><strong>Support Ticket Analysis:</strong> 42% of cancellation requests mentioned "better offers from competitors"—suggesting price sensitivity</li>
-                    </ul>
-                </div>
-
-                <div class="callout info">
-                    <h4>Validation Research (November 2024)</h4>
-                    <ul style="margin-top: 10px; line-height: 1.8;">
-                        <li><strong>Prototype Testing:</strong> 5 RMs tested low-fidelity wireframes for 2 weeks</li>
-                        <li><strong>Key Quote:</strong> "If this showed me the top 20 at-risk customers every morning with suggested offers, I'd use it daily" - Sarah, Chase RM</li>
-                        <li><strong>Quantitative:</strong> 4 out of 5 said they'd use this tool 3-5x per week</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
@@ -468,12 +447,15 @@
     <!-- Solution -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Solution</h2>
+            <h2 class="section-title">Solution Overview</h2>
 
             <div class="prd-section">
-                <h3>1. Brief of the Solution</h3>
                 <p style="font-size: 1.1rem; line-height: 1.8;">
-                    FinEdge is a <strong>real-time churn prevention dashboard</strong> that predicts which customers are likely to cancel in the next 30 days and automatically suggests personalized retention offers. It uses machine learning to analyze 120+ behavioral signals (transaction patterns, customer service interactions, engagement metrics) and provides relationship managers with actionable insights.
+                    FinEdge is a decision-support tool that surfaces high-risk customers early, explains why they are at risk, and makes it easy for teams to act.
+                </p>
+
+                <p style="font-size: 1.05rem; line-height: 1.8; margin-top: 15px;">
+                    Rather than replacing human judgment, the product is designed to augment it by prioritizing the right customers and reducing time to action.
                 </p>
 
                 <div class="callout success" style="margin-top: 20px;">
@@ -483,58 +465,46 @@
 
                 <h4 style="margin-top: 30px;">Key Capabilities:</h4>
                 <ul class="feature-list">
-                    <li><strong>Predictive Risk Scoring:</strong> Machine learning model (XGBoost + LSTM) generates churn probability for each customer, updated every 72 hours</li>
-                    <li><strong>Smart Recommendations:</strong> Offer engine suggests optimal retention tactics (APR reduction, cashback, rewards) based on customer segment and CLV</li>
-                    <li><strong>One-Click Deployment:</strong> Pre-approved offers can be sent via email/SMS instantly—no 5-day approval process</li>
-                    <li><strong>Explainability:</strong> Dashboard shows why a customer is at risk (e.g., "Transaction volume dropped 35% in last 30 days")</li>
+                    <li><strong>Risk Scoring:</strong> Predict churn probability based on 120 or more behavioral signals (transaction patterns, support interactions, engagement metrics). Model updated every 72 hours.</li>
+                    <li><strong>Explainability:</strong> Clear drivers behind each alert (e.g., "Transaction volume dropped 35% in last 30 days")</li>
+                    <li><strong>Actionability:</strong> Pre-approved offers sent via email/SMS with one click, eliminating 5-day approval delays</li>
+                    <li><strong>Visibility:</strong> Executive dashboards showing retention performance, offer acceptance rates, and ROI by segment</li>
                 </ul>
             </div>
 
             <div class="prd-section">
-                <h3>2. Alternatives Considered</h3>
+                <h3>Why This Approach</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    Generic CRM tools (Salesforce Einstein, Pega) weren't designed for banking churn. They lack domain-specific features like APR-based offers or transaction velocity tracking. Building custom allowed optimization for our exact use case while keeping implementation under 4 months.
+                </p>
+
+                <h4 style="margin-top: 25px;">Alternatives Considered:</h4>
                 <table class="timeline-table">
                     <thead>
                         <tr>
                             <th>Alternative</th>
-                            <th>Pros</th>
-                            <th>Cons</th>
-                            <th>Decision</th>
+                            <th>Why Not Selected</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Use Salesforce Einstein</strong></td>
-                            <td>Already integrated, no new tool to learn</td>
-                            <td>Generic ML (not churn-specific), batch-only updates, black-box predictions</td>
-                            <td>❌ Rejected</td>
+                            <td><strong>Salesforce Einstein</strong></td>
+                            <td>Generic ML, batch-only updates, black-box predictions</td>
                         </tr>
                         <tr>
-                            <td><strong>Build In-House Rule Engine</strong></td>
-                            <td>Full control, no licensing costs</td>
-                            <td>Requires 6+ months dev time, less accurate than ML, hard to maintain</td>
-                            <td>❌ Rejected</td>
+                            <td><strong>In-House Rule Engine</strong></td>
+                            <td>6 or more months dev time, less accurate than ML</td>
                         </tr>
                         <tr>
-                            <td><strong>Partner with Pega</strong></td>
-                            <td>Enterprise-grade, real-time decisioning</td>
-                            <td>18-24 month implementation, $500K+ cost, overkill for MVP</td>
-                            <td>❌ Rejected (too heavy)</td>
+                            <td><strong>Pega Platform</strong></td>
+                            <td>18 to 24 month implementation, $500K or more cost</td>
                         </tr>
                         <tr>
-                            <td><strong>Build Custom ML Dashboard</strong></td>
-                            <td>Tailored to banking churn, real-time updates, explainable AI</td>
-                            <td>3-4 month build time, need ML expertise</td>
-                            <td>✅ Selected</td>
+                            <td><strong>Custom ML Dashboard</strong></td>
+                            <td><strong>Selected:</strong> Tailored to banking, real-time, explainable</td>
                         </tr>
                     </tbody>
                 </table>
-
-                <div class="callout info" style="margin-top: 20px;">
-                    <h4>Why We Chose This Approach:</h4>
-                    <p style="margin-top: 10px;">
-                        Generic CRM tools (Salesforce, Pega) weren't designed for banking churn—they lack domain-specific features like APR-based offers or transaction velocity tracking. Building custom allowed us to optimize for our exact use case while keeping implementation time under 4 months.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -542,227 +512,82 @@
     <!-- Product Flow -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Product Flow (Details of the Feature/Product)</h2>
+            <h2 class="section-title">Product Flow</h2>
 
             <div class="prd-section">
-                <h3>1. Customer Journey</h3>
+                <h3>Customer Journey</h3>
                 <div class="mermaid">
 graph LR
-    A[Customer shows<br/>churn signals] --> B[FinEdge ML model<br/>detects risk]
-    B --> C[Risk score updated<br/>in database]
-    C --> D[Alert sent to RM<br/>via email/dashboard]
-    D --> E[RM logs into<br/>dashboard]
-    E --> F[Views customer<br/>profile + risk factors]
-    F --> G{RM Decision}
-    G -->|Approve Suggested Offer| H[Offer sent to<br/>customer via email]
-    G -->|Customize Offer| I[Edit offer details]
-    G -->|Dismiss Alert| J[Mark as false positive]
-    I --> H
-    H --> K[Track customer<br/>response]
-    K --> L{Customer Accepts?}
-    L -->|Yes| M[Update retention<br/>metrics]
-    L -->|No| N[Escalate to<br/>retention specialist]
+    A[Customer shows<br/>churn signals] --> B[ML model<br/>detects risk]
+    B --> C[Risk score<br/>updated]
+    C --> D[Alert sent<br/>to RM]
+    D --> E[RM reviews<br/>dashboard]
+    E --> F{Action}
+    F -->|Send Offer| G[Customer Response]
+    F -->|Dismiss| H[Feedback loop]
+    G --> I[Track outcome]
     
     style A fill:#fc8181,color:#fff
     style B fill:#f6ad55,color:#fff
-    style H fill:#68d391,color:#fff
-    style M fill:#48bb78,color:#fff
+    style G fill:#68d391,color:#fff
+    style I fill:#48bb78,color:#fff
                 </div>
             </div>
 
             <div class="prd-section">
-                <h3>2. User Stories</h3>
+                <h3>Core User Stories</h3>
                 
-                <h4>Epic 1: Churn Risk Detection</h4>
+                <h4>For Relationship Managers:</h4>
                 <ul class="feature-list">
-                    <li><strong>Story 1.1:</strong> As a Relationship Manager, I want to see a list of my top 20 highest-risk customers each morning so that I can prioritize my outreach.</li>
-                    <li><strong>Story 1.2:</strong> As a Relationship Manager, I want to understand why a customer is flagged as high-risk so that I can have informed conversations with them.</li>
-                    <li><strong>Story 1.3:</strong> As a VP of Retention, I want to see overall churn trends across all segments so that I can identify systemic issues.</li>
+                    <li>See a prioritized list of top 20 highest-risk customers each morning</li>
+                    <li>Understand why each customer is flagged as high-risk</li>
+                    <li>Send pre-approved retention offers with one click</li>
+                    <li>Customize offer details when needed (APR, cashback amount)</li>
+                    <li>Track which customers have been contacted</li>
                 </ul>
 
-                <h4>Epic 2: Retention Offer Management</h4>
+                <h4 style="margin-top: 25px;">For Retention Leadership:</h4>
                 <ul class="feature-list">
-                    <li><strong>Story 2.1:</strong> As a Relationship Manager, I want the system to suggest the best retention offer for each customer so that I don't have to guess.</li>
-                    <li><strong>Story 2.2:</strong> As a Relationship Manager, I want to send a pre-approved offer with one click so that I can act quickly before the customer leaves.</li>
-                    <li><strong>Story 2.3:</strong> As a Relationship Manager, I want to customize offer details (e.g., adjust APR or cashback amount) so that I can tailor it to specific customer needs.</li>
-                </ul>
-
-                <h4>Epic 3: Performance Tracking</h4>
-                <ul class="feature-list">
-                    <li><strong>Story 3.1:</strong> As a VP of Retention, I want to see which offers have the highest acceptance rates so that I can optimize our retention strategy.</li>
-                    <li><strong>Story 3.2:</strong> As a Relationship Manager, I want to track which customers I've reached out to so that I don't duplicate efforts.</li>
+                    <li>View overall churn trends across all segments</li>
+                    <li>See which offers have highest acceptance rates</li>
+                    <li>Track ROI of retention programs</li>
+                    <li>Identify systemic issues driving churn</li>
                 </ul>
             </div>
 
             <div class="prd-section">
-                <h3>3. User Acceptance Criteria</h3>
+                <h3>Key Acceptance Criteria</h3>
                 
                 <div class="callout">
-                    <h4>Feature: High-Risk Customer Dashboard</h4>
-                    <p><strong>Acceptance Criteria:</strong></p>
+                    <h4>High-Risk Customer Dashboard</h4>
                     <ul class="checklist" style="margin-top: 10px; line-height: 1.8;">
-                        <li>Dashboard displays top 20 customers with risk score ≥ 85%</li>
-                        <li>Each customer row shows: Name, Risk Score, CLV, Last Transaction Date, Predicted Churn Date</li>
-                        <li>Clicking a customer opens their detail page with full profile and risk indicators</li>
-                        <li>Risk scores are refreshed every 72 hours (not real-time)</li>
-                        <li>Dashboard loads in <3 seconds for 500+ customer dataset</li>
-                        <li>Users can filter by risk level (High/Medium/Low) and sort by CLV or Risk Score</li>
+                        <li>Displays top 20 customers with risk score of 85% or higher</li>
+                        <li>Shows Name, Risk Score, CLV, Last Transaction, Predicted Churn Date</li>
+                        <li>Opens detail page with full profile and risk indicators on click</li>
+                        <li>Loads in under 3 seconds for 500 or more customer dataset</li>
+                        <li>Allows filtering by risk level and sorting by CLV or Risk Score</li>
                     </ul>
                 </div>
 
                 <div class="callout" style="margin-top: 20px;">
-                    <h4>Feature: One-Click Offer Deployment</h4>
-                    <p><strong>Acceptance Criteria:</strong></p>
+                    <h4>One-Click Offer Deployment</h4>
                     <ul class="checklist" style="margin-top: 10px; line-height: 1.8;">
-                        <li>System suggests 1-3 pre-approved retention offers based on customer segment</li>
-                        <li>RM can click "Send Offer" and email is delivered within 5 minutes</li>
-                        <li>Email includes personalized offer details (APR reduction, cashback amount, expiration date)</li>
-                        <li>Offer status is tracked in database (Sent → Accepted/Declined/Expired)</li>
-                        <li>RM receives notification when customer accepts offer</li>
+                        <li>Suggests 1 to 3 pre-approved offers based on customer segment</li>
+                        <li>Delivers email within 5 minutes of clicking "Send Offer"</li>
+                        <li>Tracks status (Sent, Accepted, Declined, Expired)</li>
+                        <li>Notifies RM when customer accepts</li>
                     </ul>
                 </div>
             </div>
 
             <div class="prd-section">
-                <h3>4. Edge Cases</h3>
+                <h3>Edge Cases</h3>
                 <ul class="feature-list">
-                    <li><strong>Customer Already Contacted:</strong> If RM sends an offer, system should prevent duplicate offers for 30 days</li>
-                    <li><strong>Customer Churns Before Offer Sent:</strong> If customer cancels before RM acts, mark alert as "Missed Opportunity" and track in analytics</li>
-                    <li><strong>Model Confidence Low:</strong> If risk score is between 80-85% (borderline), show warning "Medium confidence" to RM</li>
-                    <li><strong>Customer Not in Salesforce:</strong> If customer record missing in CRM, log error and notify admin (don't crash dashboard)</li>
-                    <li><strong>Offer Expires:</strong> If customer doesn't respond within 14 days, auto-mark offer as "Expired" and re-evaluate risk score</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tentative Timelines -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Tentative Timelines</h2>
-
-            <div class="prd-section">
-                <table class="timeline-table">
-                    <thead>
-                        <tr>
-                            <th>Milestone</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>PRD Draft Complete</td>
-                            <td>Nov 15, 2024</td>
-                            <td>✅ Done</td>
-                        </tr>
-                        <tr>
-                            <td>Leadership Approval</td>
-                            <td>Nov 22, 2024</td>
-                            <td>✅ Done</td>
-                        </tr>
-                        <tr>
-                            <td>Design Mockups Ready</td>
-                            <td>Dec 5, 2024</td>
-                            <td>✅ Done</td>
-                        </tr>
-                        <tr>
-                            <td>Prototype Testing (5 RMs)</td>
-                            <td>Dec 12-20, 2024</td>
-                            <td>✅ Done</td>
-                        </tr>
-                        <tr>
-                            <td>ML Model Training Complete</td>
-                            <td>Jan 10, 2025</td>
-                            <td>✅ Done (83% AUC-ROC)</td>
-                        </tr>
-                        <tr>
-                            <td>Development Complete (MVP)</td>
-                            <td>Jan 31, 2025</td>
-                            <td>✅ Done</td>
-                        </tr>
-                        <tr>
-                            <td>Beta Launch (5 Pilot Banks)</td>
-                            <td>Feb 15, 2025</td>
-                            <td>🔄 In Progress</td>
-                        </tr>
-                        <tr>
-                            <td>Full Launch (20+ Banks)</td>
-                            <td>Apr 1, 2025</td>
-                            <td>⏳ Planned</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="mermaid" style="margin-top: 30px;">
-gantt
-    title FinEdge Development Timeline
-    dateFormat YYYY-MM-DD
-    section Discovery
-    User Research           :done, 2024-11-01, 15d
-    PRD Writing            :done, 2024-11-15, 10d
-    
-    section Design
-    Wireframes             :done, 2024-11-25, 10d
-    High-Fidelity Mockups  :done, 2024-12-05, 8d
-    Prototype Testing      :done, 2024-12-12, 8d
-    
-    section Development
-    ML Model Training      :done, 2024-12-20, 21d
-    Backend API            :done, 2025-01-05, 20d
-    Dashboard Frontend     :done, 2025-01-10, 21d
-    
-    section Launch
-    Beta Testing           :active, 2025-02-01, 30d
-    Full Launch            :2025-04-01, 15d
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dependencies -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Dependencies & Open Questions</h2>
-
-            <div class="prd-section">
-                <h3>1. Open Questions</h3>
-                <ul class="feature-list">
-                    <li><strong>Q1:</strong> Should we integrate with Zendesk for customer service ticket data, or is Salesforce case data sufficient?
-                        <br><em>→ Resolution: Start with Salesforce data; add Zendesk in V2 if needed</em></li>
-                    <li><strong>Q2:</strong> What's the maximum acceptable offer cost per customer? (Budget constraint)
-                        <br><em>→ Resolution: $350/customer approved by CFO</em></li>
-                    <li><strong>Q3:</strong> Do we need mobile app for RMs, or is web dashboard sufficient?
-                        <br><em>→ Resolution: Web-first for MVP; mobile in V3 (Month 6+)</em></li>
-                </ul>
-            </div>
-
-            <div class="prd-section">
-                <h3>2. Infrastructure Requirements</h3>
-                <ul class="feature-list">
-                    <li><strong>Database:</strong> PostgreSQL instance (RDS) for customer data + predictions</li>
-                    <li><strong>ML Pipeline:</strong> Apache Airflow for daily model retraining</li>
-                    <li><strong>Hosting:</strong> AWS (FastAPI on ECS, React on S3/CloudFront)</li>
-                    <li><strong>Monitoring:</strong> Datadog for API performance + model drift detection</li>
-                </ul>
-            </div>
-
-            <div class="prd-section">
-                <h3>3. Partner Support</h3>
-                <ul class="feature-list">
-                    <li><strong>Salesforce API:</strong> Need OAuth integration for customer data sync (every 6 hours)</li>
-                    <li><strong>Twilio/SendGrid:</strong> For email/SMS delivery of retention offers</li>
-                    <li><strong>Segment:</strong> For event tracking (customer clicks, offer responses)</li>
-                </ul>
-            </div>
-
-            <div class="prd-section">
-                <h3>4. Internal Dependencies</h3>
-                <ul class="feature-list">
-                    <li><strong>Legal Team:</strong> Review offer language for compliance (completed Dec 2024)</li>
-                    <li><strong>Data Science Team:</strong> Collaborate on ML model training (ongoing)</li>
-                    <li><strong>DevOps Team:</strong> Set up CI/CD pipeline and monitoring (completed Jan 2025)</li>
-                    <li><strong>Customer Success Team:</strong> Onboard pilot banks and provide training (Feb 2025)</li>
+                    <li><strong>Duplicate Prevention:</strong> System prevents sending multiple offers to same customer within 30 days</li>
+                    <li><strong>Missed Opportunities:</strong> If customer cancels before action, mark as "Missed" and track in analytics</li>
+                    <li><strong>Low Confidence:</strong> Risk scores between 80% to 85% show "Medium confidence" warning</li>
+                    <li><strong>Missing CRM Data:</strong> Log error and notify admin without crashing dashboard</li>
+                    <li><strong>Expired Offers:</strong> Auto-mark as "Expired" after 14 days and re-evaluate risk</li>
                 </ul>
             </div>
         </div>
@@ -771,33 +596,41 @@ gantt
     <!-- Key Learnings -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title">Key Learnings & Reflections</h2>
+            <h2 class="section-title">Key Learnings</h2>
             
             <div class="insight-box">
-                <h4>💡 Start Simple, Then Add Complexity</h4>
-                <p>My first model used 200+ features and took 2 hours to train. I simplified to 50 key features and got the same accuracy in 15 minutes. Lesson: More data doesn't always mean better predictions—focus on signal, not noise.</p>
+                <h4>Clarity Beats Complexity</h4>
+                <p>
+                    My first model used 200 or more features and took 2 hours to train. I simplified to 50 key features and got the same accuracy in 15 minutes. Simpler models with clearer explanations were more trusted and more useful than complex black-box predictions.
+                </p>
             </div>
 
             <div class="insight-box">
-                <h4>💡 Talk to Users Early and Often</h4>
-                <p>I built a beautiful dashboard that relationship managers never used because it didn't fit their workflow. After shadowing them for a week, I redesigned it around their daily routine and adoption jumped 3x. Lesson: Ship early prototypes and observe real usage.</p>
+                <h4>Workflow Fit Matters</h4>
+                <p>
+                    I built a beautiful dashboard that relationship managers never used because it didn't fit their workflow. After shadowing them for a week, I redesigned it around their daily routine. Adoption increased only after aligning the dashboard with how users actually start and structure their day.
+                </p>
             </div>
 
             <div class="insight-box">
-                <h4>💡 Change is More Predictive Than Levels</h4>
-                <p>A customer who always spends $5K/month isn't high risk. But a customer who drops from $5K to $2K in 30 days? That's a red flag. The model improved 12% when I added "change over time" features. Lesson: Behavioral deltas > absolute values.</p>
+                <h4>Change is More Predictive Than Levels</h4>
+                <p>
+                    A customer who always spends $5K per month isn't high risk. But a customer who drops from $5K to $2K in 30 days? That's a red flag. The model improved 12% when I added "change over time" features. Behavioral deltas beat absolute values.
+                </p>
             </div>
 
             <div class="insight-box">
-                <h4>💡 Build Trust with Explanations</h4>
-                <p>Managers didn't trust the AI at first. When I added "why" explanations (e.g., "This customer's risk is high because they called support 3 times in 2 weeks"), they started taking action. Lesson: Explainability is not optional—it's a core feature.</p>
+                <h4>Explainability Drives Action</h4>
+                <p>
+                    Managers didn't trust the AI at first. When I added "why" explanations (e.g., "This customer's risk is high because they called support 3 times in 2 weeks"), they started taking action. Users acted more confidently when they understood why a customer was flagged. Trust became a product requirement, not a by-product.
+                </p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2025 Neelkanth Maddheshiya. <a href="index.html" style="color: white; opacity: 0.8;">Back to Portfolio</a></p>
+            <p>&copy; 2025 Neelkanth Maddheshiya &middot; <a href="index.html" style="color: white; opacity: 0.8;">Back to Portfolio</a></p>
         </div>
     </footer>
 </body>
