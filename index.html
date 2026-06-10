@@ -3,368 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neelkanth Maddheshiya - Product Manager Portfolio</title>
-    <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-main: #2d3748;
-            --text-sub: #4a5568;
-            --bg-light: #f7fafc;
-            --accent: #667eea;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', -apple-system, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: white;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 120px 0 100px;
-            text-align: center;
-        }
-
-        .hero-eyebrow {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 25px;
-            line-height: 1.2;
-        }
-
-        .hero-tagline {
-            font-size: 1.5rem;
-            opacity: 0.95;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .hero-cta a {
-            padding: 15px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--accent);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .hero-cta a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-        }
-
-        .experience-highlight {
-            background: var(--bg-light);
-            padding: 25px;
-            border-left: 4px solid var(--accent);
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .experience-highlight h4 {
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .experience-highlight ul {
-            list-style: none;
-        }
-
-        .experience-highlight li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-        }
-
-        .experience-highlight li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        /* Skills */
-        .skill-category {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 20px;
-        }
-
-        .skill-category h3 {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid #e2e8f0;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 100px 0;
-            background: var(--bg-light);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-number {
-            color: var(--accent);
-            font-weight: 800;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .project-tagline {
-            font-weight: 600;
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .project-tags span {
-            font-size: 0.75rem;
-            background: #edf2f7;
-            padding: 4px 10px;
-            border-radius: 4px;
-        }
-
-        .btn-small {
-            padding: 8px 16px;
-            font-size: 0.85rem;
-            border-radius: 6px;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        @media (max-width: 992px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.8rem; }
-        }
-    </style>
+    <title>Neelkanth Maddheshiya | Associate PM & Product Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of Neelkanth Maddheshiya, an IIT Patna MBA & PU Engineer with experience in AI Data Operations (Turing) and Business Launching (Jyotanjali). Target roles: APM, Product Analyst, Senior BA, PM Intern.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <section class="hero">
+
+    <!-- Background Decoration -->
+    <div class="bg-mesh"></div>
+    <div class="spotlight spotlight-top-right"></div>
+    <div class="spotlight spotlight-bottom-left"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="header-nav">
+        <div class="header-container">
+            <a href="#home" class="nav-logo">
+                <span>NM</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <!-- Highlighted placeholder for Resume PDF -->
+                    <span class="placeholder-highlight" style="font-size:0.75rem; border-color:#d97706; padding:1px 4px;">
+                        <a href="#" style="color:#fbbf24; text-decoration:none;">Resume.pdf</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="container">
-            <p class="hero-eyebrow">Product Manager Portfolio</p>
-            <h1>Hi, I'm Neelkanth Maddheshiya</h1>
-            <p class="hero-tagline">Building AI products and scaling brands at the intersection of technology, strategy, and user experience.</p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="https://www.linkedin.com/in/neelkanthmaddheshiya12/" class="btn-secondary" target="_blank">LinkedIn →</a>
+            <span class="hero-tag">Targeting: APM / Senior BA / Product Analyst / PM Intern</span>
+            <h1>Building the Data & AI Foundations for <span>Next-Gen Products</span></h1>
+            <p class="hero-tagline">
+                IIT Patna MBA and BE Engineer combining AI data operations leadership (Turing Pod Lead) with Zero-to-One business scaling (Jyotanjali FMCG Brand Lead). Expert in process optimization, SQL, Python, and LLM evaluation.
+            </p>
+            <div class="hero-ctas">
+                <a href="#projects" class="btn btn-primary">Explore Case Studies</a>
+                <a href="https://www.linkedin.com/in/neelkanthmaddheshiya12/" class="btn btn-secondary" target="_blank">Connect on LinkedIn &rarr;</a>
+            </div>
+
+            <!-- Metric Impact Dashboard -->
+            <div class="metrics-bar">
+                <div class="metric-item">
+                    <div class="metric-num">10-12</div>
+                    <div class="metric-label">Team Members Managed</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-num">95%</div>
+                    <div class="metric-label">Dataset Quality Standard</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-num">40%</div>
+                    <div class="metric-label">Ramp-up Time Reduced</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-num">0 &rarr; 1</div>
+                    <div class="metric-label">FMCG Brand Scaled</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="about">
+    <!-- About Section -->
+    <section class="section" id="about">
         <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Introduction</p>
+                <h2 class="section-title">Who is Neelkanth?</h2>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <h2>What I Do</h2>
                     <p>
-                        I am a product-minded professional with a background in AI research and business operations. My approach combines analytical depth with a bias for execution, whether I am building evaluation frameworks for SOTA models or scaling a physical goods brand from the ground up.
+                        I am a product-focused analyst and operations leader with a background in AI research and business strategy. I excel at translating user and technical requirements into scalable processes, whether that means managing international data teams for state-of-the-art LLMs or sourcing raw materials to optimize COGS for a physical goods brand.
                     </p>
-
-                    <div class="experience-highlight">
-                        <h4>Strategic Lead @ Jyotanjali</h4>
-                        <p>Spearheading the Zero-to-One growth of a family-led FMCG brand.</p>
-                        <ul>
-                            <li>Owning end-to-end product lifecycle: R&D, FSSAI compliance, and GTM strategy.</li>
-                            <li>Building a scratch-made supply chain and optimizing COGS for raw material sourcing.</li>
-                            <li>Driving cross-functional execution across production, premium packaging, and sales.</li>
-                        </ul>
-                    </div>
-
                     <p>
-                        Previously at Turing, I served as a Pod Lead and Lead Research Analyst for AI/LLM projects. I managed cross-timezone teams to deliver model improvement roadmaps and built evaluation systems that caught failure modes with 80-95% accuracy.
+                        My work at Turing involved setting up evaluation rubrics and automated pipeline validation tools for foundational models, ensuring high-accuracy data inputs. At Jyotanjali, my operational focus drove a family FMCG startup from initial concept, through licensing, to premium packaging and GTM execution.
+                    </p>
+                    <p>
+                        Currently pursuing my MBA at Indian Institute of Technology, Patna, I seek to apply my technical, analytical, and leadership capabilities to roles where engineering rigor and business efficiency intersect.
                     </p>
                 </div>
-
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>🎯 Product & Strategy</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Product Lifecycle</span>
-                            <span class="skill-tag">GTM Strategy</span>
-                            <span class="skill-tag">User Research</span>
-                            <span class="skill-tag">PRD Writing</span>
-                            <span class="skill-tag">Market Research</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>📊 AI & Technical</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">Prompt Engineering</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Data Analysis</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>🛠️ Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">Notion</span>
-                            <span class="skill-tag">Jira</span>
-                            <span class="skill-tag">Mixpanel</span>
-                            <span class="skill-tag">Miro</span>
-                        </div>
-                    </div>
+                <div class="about-highlights">
+                    <h3>🏆 Key Credentials</h3>
+                    <ul class="highlight-list">
+                        <li><strong>IIT Patna MBA Candidate</strong> (Focus: PM & Market Research, CGPA: 9.85)</li>
+                        <li><strong>Bachelor of Engineering</strong> (Panjab University, Biotechnology, GATE-BT 2024 Qualified)</li>
+                        <li><strong>Turing Pod Lead</strong> (Promoted from analyst within 3 months)</li>
+                        <li><strong>McKinsey Forward Alum</strong> (Completed professional development program)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="projects" id="projects">
+    <!-- Projects Section -->
+    <section class="section" id="projects">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Featured Projects</h2>
-            
-            <div class="project-grid">
+            <div class="section-header">
+                <p class="section-subtitle">Proof of Work</p>
+                <h2 class="section-title">Case Studies &amp; Prototypes</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Twinmind Nexus -->
                 <div class="project-card">
-                    <div class="project-number">01</div>
-                    <h3>Twinmind Nexus</h3>
-                    <p class="project-tagline">AI Orchestration Prototype</p>
-                    <p class="project-description">A prototype focused on refining internal AI orchestration to bridge the gap between raw model capability and production workflows.</p>
-                    <div class="project-tags">
-                        <span>AI Ops</span>
-                        <span>Orchestration</span>
+                    <div class="project-num">01</div>
+                    <span class="project-status-badge" style="background:rgba(139,92,246,0.1); border-color:rgba(139,92,246,0.2); color:#c084fc;">Prototype</span>
+                    <h3 class="project-title">Twinmind Nexus</h3>
+                    <p class="project-subtitle">AI Orchestration Platform</p>
+                    <p class="project-desc">A prototype mapping out optimal internal AI orchestration workflows, bridging the gap between raw LLM capabilities and production-level applications.</p>
+                    <div class="project-card-tags">
+                        <span class="project-card-tag">AI Ops</span>
+                        <span class="project-card-tag">Orchestration</span>
+                        <span class="project-card-tag">Figma</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1_OYaYSUS2J_yYOOxonKoAA58ufQBc6ib/view?usp=sharing" class="btn-primary btn-small" style="background:var(--accent); color:white;">Deck</a>
-                        <a href="https://context-kindle-loop.lovable.app/" class="btn-secondary btn-small" style="color:var(--accent); border-color:var(--accent);">Prototype</a>
+                        <a href="https://drive.google.com/file/d/1_OYaYSUS2J_yYOOxonKoAA58ufQBc6ib/view?usp=sharing" class="btn btn-secondary" target="_blank">Deck</a>
+                        <a href="https://context-kindle-loop.lovable.app/" class="btn btn-primary" target="_blank">Prototype</a>
                     </div>
                 </div>
 
+                <!-- Project 2: RFQ to Booking Automation -->
                 <div class="project-card">
-                    <div class="project-number">02</div>
-                    <h3>RFQ to Booking Automation</h3>
-                    <p class="project-tagline">Workflow Optimization System</p>
-                    <p class="project-description">End-to-end automation system transforming unstructured RFQs into bookings, reducing manual overhead and latency.</p>
-                    <div class="project-tags">
-                        <span>Automation</span>
-                        <span>Workflow</span>
+                    <div class="project-num">02</div>
+                    <span class="project-status-badge" style="background:rgba(99,102,241,0.1); border-color:rgba(99,102,241,0.2); color:#818cf8;">Case Study</span>
+                    <h3 class="project-title">RFQ to Booking</h3>
+                    <p class="project-subtitle">Workflow Automation</p>
+                    <p class="project-desc">Designed an end-to-end automation system to transform unstructured RFQs into confirmed logistics bookings, reducing manual agent overhead and process latency.</p>
+                    <div class="project-card-tags">
+                        <span class="project-card-tag">Automation</span>
+                        <span class="project-card-tag">Workflow Design</span>
+                        <span class="project-card-tag">SQL</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.notion.so/RFQ-to-Booking-Automation-System-2f206a6da9c8803d8b13c23ef7285849?source=copy_link" class="btn-primary btn-small" style="background:var(--accent); color:white;">Case Study</a>
+                        <a href="https://www.notion.so/RFQ-to-Booking-Automation-System-2f206a6da9c8803d8b13c23ef7285849?source=copy_link" class="btn btn-primary" style="width:100%;" target="_blank">Read Case Study</a>
                     </div>
                 </div>
 
+                <!-- Project 3: JoshTalks AI Humanness -->
                 <div class="project-card">
-                    <div class="project-number">03</div>
-                    <h3>JoshTalks AI Humanness</h3>
-                    <p class="project-tagline">Inclusive AI Data Collection</p>
-                    <p class="project-description">Mobile-first platform for rural image collection under 2G connectivity, ensuring AI datasets are inclusive.</p>
-                    <div class="project-tags">
-                        <span>Figma</span>
-                        <span>Social Impact</span>
+                    <div class="project-num">03</div>
+                    <span class="project-status-badge" style="background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.2); color:#34d399;">Case Study</span>
+                    <h3 class="project-title">JoshTalks AI</h3>
+                    <p class="project-subtitle">Inclusive Image Collection</p>
+                    <p class="project-desc">Designed a mobile-first PWA and review flow to crowdsource culturally authentic images from low-connectivity rural regions of India for AI model training.</p>
+                    <div class="project-card-tags">
+                        <span class="project-card-tag">Product Spec</span>
+                        <span class="project-card-tag">Rural UX</span>
+                        <span class="project-card-tag">PWA</span>
                     </div>
                     <div class="project-links">
-                        <a href="joshtalks-humanness.html" class="btn-primary btn-small" style="background:var(--accent); color:white;">View Project →</a>
+                        <a href="joshtalks-humanness.html" class="btn btn-primary" style="width:100%;">View Case Study &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: PLACEHOLDER 1 -->
+                <div class="project-card placeholder-highlight" style="border: 2px dashed #d97706; background: rgba(217, 119, 6, 0.04);">
+                    <div class="project-num">04</div>
+                    <span class="project-status-badge">Upcoming</span>
+                    <h3 class="project-title" style="color:#fbbf24;">[Upcoming Case Study]</h3>
+                    <p class="project-subtitle" style="color:#f59e0b;">Pending User Input</p>
+                    <p class="project-desc" style="color:var(--text-secondary);">This card is reserved for your next case study. Send me the details and prototype link, and I will populate it for you.</p>
+                    <div class="project-card-tags">
+                        <span class="project-card-tag">TBD</span>
+                        <span class="project-card-tag">Metrics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary disabled" style="pointer-events: none; opacity: 0.5;">Prototype</a>
+                    </div>
+                </div>
+
+                <!-- Project 5: PLACEHOLDER 2 -->
+                <div class="project-card placeholder-highlight" style="border: 2px dashed #d97706; background: rgba(217, 119, 6, 0.04);">
+                    <div class="project-num">05</div>
+                    <span class="project-status-badge">Upcoming</span>
+                    <h3 class="project-title" style="color:#fbbf24;">[Upcoming Prototype]</h3>
+                    <p class="project-subtitle" style="color:#f59e0b;">Pending User Input</p>
+                    <p class="project-desc" style="color:var(--text-secondary);">This card is reserved for your second upcoming prototype or project presentation. Let me know when it's ready.</p>
+                    <div class="project-card-tags">
+                        <span class="project-card-tag">TBD</span>
+                        <span class="project-card-tag">User Flow</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary disabled" style="pointer-events: none; opacity: 0.5;">Prototype</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience timeline Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">My Background</p>
+                <h2 class="section-title">Work &amp; Education Timeline</h2>
+            </div>
+            
+            <div class="timeline-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'exp-turing')">AI Operations (Turing)</button>
+                <button class="tab-btn" onclick="switchTab(event, 'exp-jyotanjali')">Business Operations (Jyotanjali)</button>
+                <button class="tab-btn" onclick="switchTab(event, 'exp-edu')">Education &amp; Credentials</button>
+            </div>
+
+            <!-- Turing Timeline -->
+            <div class="timeline-content active" id="exp-turing">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-role">Pod Lead / Lead Research Analyst</span>
+                            <span class="timeline-comp">@ Turing Enterprises Inc</span>
+                        </div>
+                        <span class="timeline-date">July 2024 - Present</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li>Managed a 10-12 member cross-timezone AI data operations pod, leading task allocation, quality reviews, backlog prioritization, and delivery across 8+ AI training projects.</li>
+                        <li>Partnered in designing and scaling AI evaluation projects by developing rubrics, reviewer calibration guidelines, pilot datasets, and QA frameworks for SFT, RLHF, RAG, and multimodal models.</li>
+                        <li>Built reporting dashboards, automated tracking workflows, and Python-based validation tools to monitor throughput, quality, and SLA adherence.</li>
+                        <li>Designed SOPs and onboarding workflows that reduced new member ramp-up time by 40% while maintaining strict data quality standards.</li>
+                        <li>Curated, audited, and validated high-volume AI training datasets across STEM and domain-specific corpora, maintaining 80-95% quality thresholds.</li>
+                        <li>Performed annotation QA, dataset auditing, fuzzy/semantic deduplication, and error analysis to reduce low-signal data.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Jyotanjali Timeline -->
+            <div class="timeline-content" id="exp-jyotanjali">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-role">Strategic Lead (FMCG Brand Ops)</span>
+                            <span class="timeline-comp">@ Jyotanjali Group</span>
+                        </div>
+                        <span class="timeline-date">August 2023 - June 2024</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li>Spearheaded the Zero-to-One growth of a family-led FMCG startup brand from concept to commercial execution.</li>
+                        <li>Owned end-to-end product lifecycle, managing initial formulation R&D, FSSAI regulatory compliance, and local GTM strategy.</li>
+                        <li>Structured the raw material supply chain and negotiated vendor terms, optimizing COGS and sourcing operations.</li>
+                        <li>Directed cross-functional execution across production, premium packaging, local sales teams, and distributor channels.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="timeline-content" id="exp-edu">
+                <!-- MBA -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-role">MBA (Master of Business Administration)</span>
+                            <span class="timeline-comp">@ Indian Institute of Technology, Patna</span>
+                        </div>
+                        <span class="timeline-date">2025 - 2027</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li><strong>CGPA:</strong> 9.85</li>
+                        <li><strong>Focus Areas:</strong> Product Management, Market Research, Data-Driven Decision Making, Gen AI.</li>
+                    </ul>
+                </div>
+                <!-- Bachelor -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-role">Bachelor of Engineering (Department of Biotechnology)</span>
+                            <span class="timeline-comp">@ UIET, Panjab University, Chandigarh</span>
+                        </div>
+                        <span class="timeline-date">2020 - 2024</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li><strong>CGPA:</strong> 7.67</li>
+                        <li><strong>Achievements:</strong> Qualified GATE-BT 2024 (Biotechnology) | Promoted to Pod Lead within 3 months at Turing.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Expertise</p>
+                <h2 class="section-title">Core Skills &amp; Tools</h2>
+            </div>
+            
+            <div class="skills-container">
+                <!-- Skill Card 1 -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">
+                        <span>🎯 Product &amp; Operations</span>
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Product Lifecycle</span>
+                        <span class="skill-tag">GTM Strategy</span>
+                        <span class="skill-tag">Process Optimization</span>
+                        <span class="skill-tag">Requirements Gathering</span>
+                        <span class="skill-tag">Sprint Planning</span>
+                        <span class="skill-tag">Root Cause Analysis</span>
+                        <span class="skill-tag">SOP Development</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">
+                        <span>📊 AI &amp; Data Science</span>
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LLM Evaluation</span>
+                        <span class="skill-tag">RAG &amp; SFT</span>
+                        <span class="skill-tag">RLHF Rubrics</span>
+                        <span class="skill-tag">Dataset QC &amp; Audit</span>
+                        <span class="skill-tag">NLP Workflows</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Python (Pandas, NumPy)</span>
+                        <span class="skill-tag">SQL Database Querying</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title">
+                        <span>🛠️ PM Tools</span>
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel / GSheets</span>
+                        <span class="skill-tag">Slack &amp; Miro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="contact-title">Let's build something next-gen.</h2>
+                <p class="contact-desc">
+                    I am actively seeking Associate PM, Product Analyst, Senior BA, and PM Intern roles. If you have an opportunity or want to discuss AI data operations, product strategy, or my prototypes, let's connect!
+                </p>
+                <div class="contact-buttons">
+                    <a href="mailto:maddheshiya1616@gmail.com" class="btn btn-primary">maddheshiya1616@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/neelkanthmaddheshiya12/" class="btn btn-secondary" target="_blank">LinkedIn Profile &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="container" style="text-align: center; padding: 60px 0; border-top: 1px solid #e2e8f0;">
-            <p>© 2026 Neelkanth Maddheshiya | <a href="mailto:maddheshiya1616@gmail.com" style="text-decoration:none; color:var(--accent);">Email</a></p>
+        <div class="container footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Neelkanth Maddheshiya. All rights reserved.
+            </div>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="mailto:maddheshiya1616@gmail.com">Contact</a></li>
+            </ul>
         </div>
     </footer>
+
+    <!-- Interactive Tab JS -->
+    <script>
+        function switchTab(evt, tabId) {
+            // Get all elements with class="timeline-content" and hide them
+            const contents = document.getElementsByClassName("timeline-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            // Get all elements with class="tab-btn" and remove the class "active"
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
